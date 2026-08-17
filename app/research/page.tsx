@@ -1,4 +1,3 @@
-import { PageHero } from "../components/PageHero";
 import { PublicationItem } from "../components/PublicationItem";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
@@ -16,59 +15,99 @@ export default function ResearchPage() {
   return (
     <main>
       <SiteHeader active="research" />
-      <PageHero
-        index="01"
-        eyebrow="Research"
-        title="From overlooked harm to legible response."
-        intro="My research focuses on overlooked forms of victimization. Using quantitative and computational methods, I connect four areas—each moving from documenting harm toward building a response."
-      />
+      <header
+        className="research-editorial-hero"
+        aria-labelledby="research-page-title"
+      >
+        <p className="section-number research-editorial-hero__index">
+          01 / Research
+        </p>
+        <h1 id="research-page-title" className="research-editorial-hero__title">
+          Research
+        </h1>
+        <p className="research-editorial-hero__statement">
+          From overlooked harm to legible response.
+        </p>
+        <p className="research-editorial-hero__intro">
+          My research focuses on overlooked forms of victimization. Using
+          quantitative and computational methods, I connect four areas—each
+          moving from documenting harm toward building a response.
+        </p>
+      </header>
 
-      <nav className="section-jump" aria-label="Research areas">
-        {researchAreas.map((area) => (
-          <a href={`#${area.id}`} key={area.id}>
-            <span>{area.number}</span>
-            {area.shortTitle}
-          </a>
-        ))}
+      <nav className="research-program-nav" aria-label="Research programs">
+        <ol className="research-program-nav__list">
+          {researchAreas.map((area) => (
+            <li key={area.id}>
+              <a href={`#${area.id}`}>
+                <span className="research-program-nav__number">
+                  {area.number}
+                </span>
+                {area.shortTitle}
+              </a>
+            </li>
+          ))}
+        </ol>
       </nav>
 
-      <div className="research-areas">
+      <div className="research-programs">
         {researchAreas.map((area) => (
-          <section className="research-area" id={area.id} key={area.id}>
-            <div className="research-area__heading">
-              <p className="section-number">{area.number} / Research area</p>
-              <h2>{area.title}</h2>
-              <p className="research-area__thesis">{area.thesis}</p>
+          <article
+            className="research-program"
+            id={area.id}
+            key={area.id}
+            aria-labelledby={`${area.id}-title`}
+          >
+            <header className="research-program__header">
+              <p className="section-number research-program__number">
+                {area.number} / Research area
+              </p>
+              <h2 id={`${area.id}-title`}>{area.title}</h2>
+              <p className="research-program__thesis">{area.thesis}</p>
+            </header>
+
+            <div className="research-program__prose">
+              <p>{area.description}</p>
             </div>
 
-            <div className="research-area__body">
-              <p className="long-copy">{area.description}</p>
-
-              <aside className="question-panel">
-                <p className="eyebrow">Key questions</p>
-                <ol>
-                  {area.questions.map((question) => (
-                    <li key={question}>{question}</li>
-                  ))}
-                </ol>
-              </aside>
-            </div>
+            <section
+              className="research-program__questions"
+              aria-labelledby={`${area.id}-questions`}
+            >
+              <h3 id={`${area.id}-questions`}>Key questions</h3>
+              <ol>
+                {area.questions.map((question) => (
+                  <li key={question}>{question}</li>
+                ))}
+              </ol>
+            </section>
 
             {area.dissertation ? (
-              <div className="dissertation-feature">
-                <div>
-                  <p className="eyebrow eyebrow--light">Dissertation</p>
-                  <h3>{area.dissertation.title}</h3>
-                </div>
+              <aside
+                className="research-program__dissertation"
+                aria-labelledby={`${area.id}-dissertation`}
+              >
+                <p className="eyebrow">Dissertation</p>
+                <h3 id={`${area.id}-dissertation`}>
+                  {area.dissertation.title}
+                </h3>
                 <p>{area.dissertation.text}</p>
-              </div>
+              </aside>
             ) : null}
 
-            <div className="research-list-block">
-              <div className="list-heading">
-                <p className="eyebrow">Featured publications</p>
-                <span>{String(area.publications.length).padStart(2, "0")}</span>
-              </div>
+            <section
+              className="research-program__section research-program__publications"
+              aria-labelledby={`${area.id}-publications`}
+            >
+              <header className="research-program__section-heading">
+                <h3 id={`${area.id}-publications`}>Featured publications</h3>
+                <span
+                  className="research-program__count"
+                  aria-label={`${area.publications.length} featured publications`}
+                >
+                  {String(area.publications.length).padStart(2, "0")}
+                </span>
+              </header>
               <div>
                 {area.publications.map((publication) => (
                   <PublicationItem
@@ -77,27 +116,35 @@ export default function ResearchPage() {
                   />
                 ))}
               </div>
-            </div>
+            </section>
 
-            <div className="research-list-block project-block">
-              <div className="list-heading">
-                <p className="eyebrow">Current projects</p>
-                <span>{String(area.projects.length).padStart(2, "0")}</span>
-              </div>
-              <div className="project-list">
+            <section
+              className="research-program__section research-program__projects"
+              aria-labelledby={`${area.id}-projects`}
+            >
+              <header className="research-program__section-heading">
+                <h3 id={`${area.id}-projects`}>Current projects</h3>
+                <span
+                  className="research-program__count"
+                  aria-label={`${area.projects.length} current projects`}
+                >
+                  {String(area.projects.length).padStart(2, "0")}
+                </span>
+              </header>
+              <ul className="research-program__project-list">
                 {area.projects.map((project) => (
-                  <article key={project.text}>
+                  <li key={project.text}>
                     <span>{project.status}</span>
                     <p>{project.text}</p>
-                  </article>
+                  </li>
                 ))}
-              </div>
-            </div>
-          </section>
+              </ul>
+            </section>
+          </article>
         ))}
       </div>
 
-      <section className="closing-cta">
+      <section className="closing-cta research-closing">
         <p className="eyebrow eyebrow--light">The connecting thread</p>
         <h2>Who is recognized—and what changes once they are?</h2>
         <a className="button button-light" href="/teaching">

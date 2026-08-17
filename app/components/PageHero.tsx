@@ -14,16 +14,16 @@ export function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="page-hero">
+    <section className="page-hero" aria-labelledby="page-title">
       <div className="page-hero__index" aria-hidden="true">
-        {index}
+        <span>{index}</span>
       </div>
-      <div className="page-hero__copy">
-        <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
-        <p>{intro}</p>
-        {children}
-      </div>
+      <header className="page-hero__copy">
+        <p className="eyebrow page-hero__eyebrow">{eyebrow}</p>
+        <h1 id="page-title">{title}</h1>
+        <p className="page-hero__intro">{intro}</p>
+        {children ? <div className="page-hero__actions">{children}</div> : null}
+      </header>
     </section>
   );
 }

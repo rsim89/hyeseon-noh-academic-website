@@ -44,12 +44,12 @@ test("exports every route as standalone static HTML", async () => {
 test("exports Pages support files and public social image", async () => {
   await access(path.join(outputDirectory, ".nojekyll"));
   await access(path.join(outputDirectory, "404.html"));
-  await access(path.join(outputDirectory, "og.png"));
+  await access(path.join(outputDirectory, "og-editorial.png"));
 
   const home = await readFile(path.join(outputDirectory, "index.html"), "utf8");
   assert.match(
     home,
-    /https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/og\.png/,
+    /https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/og-editorial\.png/,
   );
   assert.match(
     home,

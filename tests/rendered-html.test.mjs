@@ -30,7 +30,7 @@ test("renders the academic homepage", async () => {
   const html = await response.text();
   assert.match(html, /Understanding is where/);
   assert.match(html, /overlooked forms of victimization/i);
-  assert.match(html, /Explore my research/);
+  assert.match(html, /Read more about my research/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Building your site/);
 });
 
