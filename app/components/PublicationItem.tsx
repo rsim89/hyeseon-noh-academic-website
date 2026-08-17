@@ -7,15 +7,19 @@ export function PublicationItem({
   publication: Publication;
   compact?: boolean;
 }) {
+  const linkLabel = publication.linkLabel ?? "DOI";
+
   return (
-    <article className={`publication ${compact ? "publication--compact" : ""}`}>
+    <article
+      className={`publication${compact ? " publication--compact" : ""}`}
+    >
       <div className="publication__meta">
         <span>{publication.year}</span>
         {publication.note ? <small>{publication.note}</small> : null}
       </div>
       <div className="publication__copy">
-        <p>{publication.authors}</p>
-        <h4>{publication.title}</h4>
+        <p className="publication__authors">{publication.authors}</p>
+        <h3 className="publication__title">{publication.title}</h3>
         <p className="publication__venue">{publication.venue}</p>
       </div>
       <div className="publication__action">
@@ -24,9 +28,10 @@ export function PublicationItem({
             href={publication.link}
             target="_blank"
             rel="noreferrer"
-            aria-label={`${publication.linkLabel ?? "DOI"} for ${publication.title}`}
+            aria-label={`${linkLabel} for ${publication.title}`}
           >
-            {publication.linkLabel ?? "DOI"} <span aria-hidden="true">↗</span>
+            <span>{linkLabel}</span>
+            <span aria-hidden="true">↗</span>
           </a>
         ) : (
           <span aria-label="No external link available">—</span>

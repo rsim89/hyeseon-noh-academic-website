@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 type SiteHeaderProps = {
-  active?: "research" | "teaching" | "cv" | "about";
+  active?: "home" | "research" | "teaching" | "cv" | "about";
   tone?: "light" | "dark";
 };
 
 const navItems = [
+  { label: "Home", href: "/", id: "home" },
+  { label: "CV", href: "/cv", id: "cv" },
   { label: "Research", href: "/research", id: "research" },
   { label: "Teaching", href: "/teaching", id: "teaching" },
   { label: "About", href: "/about", id: "about" },
@@ -15,45 +17,38 @@ export function SiteHeader({ active, tone = "light" }: SiteHeaderProps) {
   return (
     <header className={`site-header site-header--${tone}`}>
       <Link className="wordmark" href="/" aria-label="Hyeseon Noh home">
-        <span>HN</span>
-        <strong>Hyeseon Noh</strong>
+        <span className="wordmark__name">Hyeseon Noh</span>
       </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">
         {navItems.map((item) => (
-          <a
+          <Link
             key={item.id}
             href={item.href}
             aria-current={active === item.id ? "page" : undefined}
           >
             {item.label}
-          </a>
+          </Link>
         ))}
-        <a
-          className="nav-cv"
-          href="/cv"
-          aria-current={active === "cv" ? "page" : undefined}
-        >
-          CV
-        </a>
       </nav>
 
       <details className="mobile-nav">
-        <summary aria-label="Open navigation">Menu</summary>
+        <summary aria-label="Toggle navigation">
+          <span className="mobile-nav__label">Menu</span>
+          <span className="mobile-nav__icon" aria-hidden="true">
+            +
+          </span>
+        </summary>
         <nav aria-label="Mobile navigation">
-          <Link href="/">Home</Link>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.id}
               href={item.href}
               aria-current={active === item.id ? "page" : undefined}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a href="/cv" aria-current={active === "cv" ? "page" : undefined}>
-            CV
-          </a>
         </nav>
       </details>
     </header>

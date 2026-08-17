@@ -19,7 +19,7 @@ export async function buildPageMetadata(
   )
     .split(",")[0]
     .trim();
-  const imageUrl = `${protocol}://${host}/og.png`;
+  const imageUrl = `${protocol}://${host}/og-editorial.png`;
 
   return {
     title,
@@ -31,7 +31,7 @@ export async function buildPageMetadata(
       images: [
         {
           url: imageUrl,
-          width: 1729,
+          width: 1728,
           height: 910,
           alt: "Hyeseon Noh — Understanding is where justice begins.",
         },

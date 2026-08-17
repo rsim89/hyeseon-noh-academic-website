@@ -1,11 +1,7 @@
-import { PublicationItem } from "./components/PublicationItem";
+import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
-import {
-  institutionLinks,
-  researchAreas,
-  selectedPublications,
-} from "./data/siteContent";
+import { institutionLinks } from "./data/siteContent";
 import { buildPageMetadata } from "./lib/metadata";
 
 export async function generateMetadata() {
@@ -17,159 +13,106 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <main>
-      <SiteHeader />
+    <main className="home-page">
+      <SiteHeader active="home" />
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">
-            Criminology · Victimization · Technology & Justice
-          </p>
-          <h1>
-            Understanding is where <em>justice</em> begins.
-          </h1>
-          <p className="hero-intro">
-            I study overlooked forms of victimization—how harm is produced,
-            how technology reshapes it, and how law and institutions can
-            recognize the people too often left unseen.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="/research">
-              Explore my research <span aria-hidden="true">↗</span>
-            </a>
-            <a className="text-link" href="/cv">
-              View CV <span aria-hidden="true">↓</span>
-            </a>
+      <section
+        className="home-profile"
+        id="top"
+        aria-labelledby="home-profile-title"
+      >
+        <figure className="home-profile__visual">
+          {/* Replace this placeholder with /profile.jpg when a public portrait is available. */}
+          <div
+            className="home-profile__portrait home-profile__portrait--placeholder"
+            role="img"
+            aria-label="Portrait placeholder for Hyeseon Noh"
+          >
+            <span className="home-profile__monogram" aria-hidden="true">
+              HN
+            </span>
           </div>
-        </div>
+          <figcaption>
+            <strong>Hyeseon Noh, Ph.D.</strong>
+            <span>Criminology &amp; Criminal Justice</span>
+          </figcaption>
+        </figure>
 
-        <aside className="research-index" aria-label="Research areas">
-          <div className="index-kicker">Research lens</div>
-          <ol>
-            {researchAreas.map((area) => (
-              <li key={area.id}>
-                <span>{area.number}</span>
-                {area.shortTitle}
-              </li>
-            ))}
-          </ol>
-          <p>Quantitative and computational approaches, grounded in people.</p>
-        </aside>
-      </section>
+        <article className="home-profile__bio">
+          <p className="eyebrow">Welcome</p>
+          <h1 id="home-profile-title">Hyeseon Noh</h1>
+          <div className="home-profile__prose">
+            <p>
+              I am a{" "}
+              <a
+                href={institutionLinks.bridgeHumanities}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Bridge Humanities Teaching Fellow
+              </a>{" "}
+              at the University of South Carolina, a Managing Editor for{" "}
+              <a
+                href={institutionLinks.raceAndJustice}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Race and Justice: An International Journal
+              </a>
+              , and a member of the Membership Committee for the{" "}
+              <a
+                href={institutionLinks.internationalCriminology}
+                target="_blank"
+                rel="noreferrer"
+              >
+                ASC Division of International Criminology
+              </a>
+              . <strong>I study overlooked forms of victimization: how harm is
+              produced and reproduced, how emerging technologies reshape it,
+              and how law and institutions can better recognize and protect
+              victims.</strong> I use quantitative and computational methods,
+              guided by one principle:
+              <em> understanding is where justice begins.</em>
+            </p>
 
-      <section className="role-strip" aria-label="Current roles">
-        <a
-          href={institutionLinks.bridgeHumanities}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Bridge Humanities Teaching Fellow ↗
-        </a>
-        <span>University of South Carolina</span>
-        <a
-          href={institutionLinks.raceAndJustice}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Managing Editor · Race and Justice ↗
-        </a>
-      </section>
+            <p>
+              My work appears in <em>Journal of Criminal Justice</em>,{" "}
+              <em>Ethnic and Racial Studies</em>, and{" "}
+              <em>Victims &amp; Offenders</em>, among other outlets. Across four
+              connected research areas, I move from documenting overlooked
+              harm toward building responses to it.{" "}
+              <Link href="/research">Read more about my research</Link>.
+            </p>
 
-      <section className="identity">
-        <p className="section-number">01 / Perspective</p>
-        <div>
-          <h2>I study overlooked forms of victimization.</h2>
-          <p>
-            My work follows harm from lived experience to institutional
-            response: first making it legible, then asking how theory, evidence,
-            technology, and law can build more meaningful protection.
-          </p>
-        </div>
-      </section>
+            <p>
+              Sharing this work with students and communities matters to me. In
+              Social Advocacy and Ethical Life, students return throughout the
+              semester to the question “who gets heard?” Beyond the classroom,
+              I have served at the Korean School of Columbia, SC, and Kids of
+              Asia with Save the Children in South Korea.{" "}
+              <Link href="/teaching">Explore my teaching</Link> or{" "}
+              <Link href="/about">learn more about my community work</Link>.
+            </p>
 
-      <section className="research-preview">
-        <div className="research-preview__intro">
-          <p className="section-number">02 / Research</p>
-          <h2>Four areas. One connected inquiry.</h2>
-          <p>
-            Each program looks at a different part of the same movement—from
-            recognition to response.
-          </p>
-          <a className="inline-arrow" href="/research">
-            Explore the full research program <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <div className="research-preview__list">
-          {researchAreas.map((area) => (
-            <a href={`/research#${area.id}`} key={area.id}>
-              <span>{area.number}</span>
-              <div>
-                <h3>{area.title}</h3>
-                <p>{area.thesis}</p>
-              </div>
-              <b aria-hidden="true">↗</b>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="selected-work">
-        <div className="section-title-row">
-          <div>
-            <p className="section-number">03 / Selected work</p>
-            <h2>Recent publications</h2>
+            <p>
+              I earned my Ph.D. in Criminology and Criminal Justice from the
+              University of South Carolina in May 2026. My dissertation,
+              “Developing and Validating Asian American General Strain Theory,”
+              received the Helen Taylor Greene and Vernetta D. Young Graduate
+              Fellowship, the ADPCCJ Student Research Award, and the ACJS
+              Student Scholarship Mini-Grant Travel Award for People of Color
+              and Women.
+            </p>
           </div>
-          <p>
-            Work appearing in leading journals across criminology, race and
-            ethnicity, victimology, and justice.
-          </p>
-        </div>
-        <div className="selected-work__list">
-          {selectedPublications.map((publication) => (
-            <PublicationItem
-              publication={publication}
-              key={publication.title}
-            />
-          ))}
-        </div>
-      </section>
 
-      <section className="teaching-preview">
-        <div className="teaching-preview__question">
-          <span>Who</span>
-          <span>gets</span>
-          <span>heard?</span>
-        </div>
-        <div className="teaching-preview__copy">
-          <p className="section-number">04 / Teaching</p>
-          <h2>The question moves from research into the classroom.</h2>
-          <p>
-            Through experiential learning, fieldwork, data analysis, case
-            debates, and reflection, students practice listening before making
-            a claim—and learn to ask what evidence includes, omits, and makes
-            possible.
-          </p>
-          <a className="button button-dark-outline" href="/teaching">
-            Explore teaching <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
-
-      <section className="community-preview">
-        <div>
-          <p className="section-number">05 / Beyond academia</p>
-          <h2>Knowledge matters when it strengthens belonging.</h2>
-        </div>
-        <div>
-          <p>
-            My work with the Korean School of Columbia and Kids of Asia in
-            South Korea extends the same commitment beyond the university:
-            listening across cultures and building supportive communities.
-          </p>
-          <a className="inline-arrow" href="/about">
-            More about my path <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+          <nav className="home-profile__links" aria-label="Profile links">
+            <Link href="/cv">Curriculum vitae</Link>
+            <Link href="/research">Research</Link>
+            <Link href="/teaching">Teaching</Link>
+            <Link href="/about">About</Link>
+            <a href="mailto:hnoh@email.sc.edu">Contact</a>
+          </nav>
+        </article>
       </section>
 
       <SiteFooter />

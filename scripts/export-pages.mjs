@@ -113,10 +113,10 @@ function prepareStaticHtml(source, route) {
       "",
     )
     .replace(
-      /https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?\/og\.png/gi,
-      `${siteUrl}/og.png`,
+      /https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?\/og-editorial\.png/gi,
+      `${siteUrl}/og-editorial.png`,
     )
-    .replaceAll(`${origin}/og.png`, `${siteUrl}/og.png`)
+    .replaceAll(`${origin}/og-editorial.png`, `${siteUrl}/og-editorial.png`)
     .replace(
       /\b(href|src|srcset|action|data)=("|')\/(?!\/)/gi,
       (_, attribute, quote) => `${attribute}=${quote}${basePath}/`,
@@ -168,8 +168,8 @@ function stripTrailingSlash(value) {
 function rewriteSocialImageUrls(value) {
   return value
     .replace(
-      /https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?\/og\.png/gi,
-      `${siteUrl}/og.png`,
+      /https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?\/og-editorial\.png/gi,
+      `${siteUrl}/og-editorial.png`,
     )
-    .replaceAll(`${origin}/og.png`, `${siteUrl}/og.png`);
+    .replaceAll(`${origin}/og-editorial.png`, `${siteUrl}/og-editorial.png`);
 }

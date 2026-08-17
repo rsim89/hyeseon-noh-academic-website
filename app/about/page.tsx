@@ -1,4 +1,3 @@
-import { PageHero } from "../components/PageHero";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { buildPageMetadata } from "../lib/metadata";
@@ -32,67 +31,90 @@ export default function AboutPage() {
   return (
     <main>
       <SiteHeader active="about" />
-      <PageHero
-        index="04"
-        eyebrow="About"
-        title="Across places, one enduring question."
-        intro="My academic path connects South Korea and the United States. Across research, teaching, and service, I keep returning to how culture shapes experiences of harm, recognition, and belonging."
-      />
+      <header className="academic-page-hero academic-page-hero--centered about-page__hero">
+        <p className="academic-page-hero__index" aria-hidden="true">
+          04
+        </p>
+        <p className="eyebrow">About</p>
+        <h1>Across places, one enduring question.</h1>
+        <p className="academic-page-hero__intro">
+          My academic path connects South Korea and the United States. Across
+          research, teaching, and service, I keep returning to how culture
+          shapes experiences of harm, recognition, and belonging.
+        </p>
+      </header>
 
-      <section className="about-origin">
-        <div className="name-portrait" aria-label="Hyeseon Noh in Korean">
-          <span>노</span>
-          <span>혜</span>
-          <span>선</span>
-        </div>
-        <div className="about-origin__copy">
+      <section
+        className="academic-two-column about-origin about-page__section"
+        aria-labelledby="about-origin-heading"
+      >
+        <aside className="academic-two-column__aside about-page__section-label">
           <p className="section-number">01 / Where I come from</p>
-          <h2>Research shaped by movement between cultural contexts.</h2>
-          <p>
-            I earned my Ph.D. in Criminology and Criminal Justice from the
-            University of South Carolina in May 2026. My work is informed by
-            questions that become especially visible across contexts: whose
-            experience theory recognizes, how institutions interpret harm, and
-            where belonging is made possible.
+          <p className="about-page__name" lang="ko">
+            노혜선
           </p>
-          <p>
-            This comparative perspective is not a separate strand of my work.
-            It is the lens that connects my research on race and culture,
-            technology-facilitated harm, legal response, and computational
-            methods.
-          </p>
+        </aside>
+        <div className="academic-two-column__content about-origin__copy">
+          <h2 id="about-origin-heading">
+            Research shaped by movement between cultural contexts.
+          </h2>
+          <div className="about-page__prose">
+            <p>
+              I earned my Ph.D. in Criminology and Criminal Justice from the
+              University of South Carolina in May 2026. My work is informed by
+              questions that become especially visible across contexts: whose
+              experience theory recognizes, how institutions interpret harm,
+              and where belonging is made possible.
+            </p>
+            <p>
+              This comparative perspective is not a separate strand of my
+              work. It is the lens that connects my research on race and
+              culture, technology-facilitated harm, legal response, and
+              computational methods.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="community-section">
-        <div className="section-title-row">
-          <div>
-            <p className="section-number">02 / Community</p>
-            <h2>Connecting with communities</h2>
-          </div>
-          <p>
+      <section
+        className="academic-two-column community-section about-page__section"
+        aria-labelledby="about-community-heading"
+      >
+        <aside className="academic-two-column__aside about-page__section-label">
+          <p className="section-number">02 / Community</p>
+          <p className="about-page__aside-copy">
             Sharing knowledge matters most when it helps people find
             recognition and belonging.
           </p>
-        </div>
-        <div className="community-list">
-          {communities.map((community, index) => (
-            <article key={community.name}>
-              <div className="community-number">0{index + 1}</div>
-              <p className="eyebrow">{community.role}</p>
-              <h3>{community.name}</h3>
-              <p>{community.text}</p>
-            </article>
-          ))}
+        </aside>
+        <div className="academic-two-column__content">
+          <h2 id="about-community-heading">Connecting with communities</h2>
+          <ul className="community-list academic-entry-list">
+            {communities.map((community) => (
+              <li
+                className="community-list__item academic-entry-list__item"
+                key={community.name}
+              >
+                <p className="eyebrow">{community.role}</p>
+                <h3>{community.name}</h3>
+                <p>{community.text}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <section className="about-values">
-        <p className="section-number">03 / The work beyond the work</p>
-        <div>
-          <blockquote>
-            “Understanding is where justice begins.”
-          </blockquote>
+      <section
+        className="academic-two-column about-values about-page__section"
+        aria-labelledby="about-values-heading"
+      >
+        <aside className="academic-two-column__aside about-page__section-label">
+          <p className="section-number">03 / The work beyond the work</p>
+        </aside>
+        <div className="academic-two-column__content about-values__copy">
+          <h2 id="about-values-heading">
+            <q>Understanding is where justice begins.</q>
+          </h2>
           <p>
             For me, this is more than a research statement. It is a way of
             approaching students, communities, and collaboration: listen
