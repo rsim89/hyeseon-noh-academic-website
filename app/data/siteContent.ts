@@ -39,7 +39,7 @@ export const researchAreas: ResearchArea[] = [
     shortTitle: "Race, culture & strain",
     thesis: "Theory should recognize the experiences it was not built to see.",
     description:
-      "Criminological theories explain crime and victimization through the experiences they were built on, and some populations were missed in that foundation. I examine how distinct cultural and social contexts shape strain, coping, and harm. The larger goal moves beyond explanation: understanding how these contexts should inform theory, measurement, and institutional practice, so that the people they describe are protected by and integrated into the systems built to serve them.",
+      "Criminological theories explain crime and victimization through the experiences they were built on, and some populations were missed in that foundation. In this area, I examine how distinct cultural and social contexts shape strain, coping, and harm. The larger goal moves beyond explanation: understanding how these contexts should inform theory, measurement, and institutional practice, so that the people they describe are protected by and integrated into the systems built to serve them.",
     questions: [
       "How are diverse forms of victimization produced and reproduced?",
       "How do cultural contexts shape strain, coping, and harm?",
@@ -47,7 +47,7 @@ export const researchAreas: ResearchArea[] = [
     ],
     dissertation: {
       title: "Developing and validating Asian American general strain theory",
-      text: "My dissertation builds and tests a general strain theory framework specific to Asian American experiences. It is developing into articles on the theory’s validation, the impact of collectivism, and immigrant generational variation. Extending this work, I am lead PI on a proposal under review at the Russell Sage Foundation examining ethnic heterogeneity among Asian Americans and their experiences in the criminal justice system.",
+      text: "My dissertation, “Developing and validating Asian American general strain theory,” builds and tests a general strain theory framework specific to Asian American experiences. It is now developing into a series of articles on (1) the theory’s validation, (2) impact of collectivism, and (3) immigrant generational variation. Extending this work, I am lead PI on a proposal under review at the Russell Sage Foundation, examining ethnic heterogeneity among Asian Americans and their experiences in the criminal justice system.",
     },
     publications: [
       {
@@ -59,7 +59,7 @@ export const researchAreas: ResearchArea[] = [
         link: "https://doi.org/10.1080/01419870.2026.2622421",
       },
       {
-        authors: "Noh, H. & Jo, Y.",
+        authors: "Noh, H.* & Jo, Y.",
         year: "2026",
         title:
           "Correlates of non-suicidal self-injury in South Korean juvenile detention facilities: A general strain theory perspective",
@@ -81,7 +81,7 @@ export const researchAreas: ResearchArea[] = [
           "The Intersection of Race, Culture, and Strain: Insights from the Asian American Community",
         venue:
           "In Kelly Welch (Ed.), Research Handbook on Race, Crime and Justice, Edward Elgar Publishing",
-        note: "Invited contribution",
+        note: "Book chapter",
       },
       {
         authors: "Noh, H.",
@@ -90,22 +90,24 @@ export const researchAreas: ResearchArea[] = [
         venue:
           "Global Perspectives on Sex Offending, pp. 19–34, Bloomsbury Publishing",
         link: "https://doi.org/10.5040/9798881845575.0005",
-        note: "Invited contribution",
+        note: "Book chapter",
       },
       {
         authors: "Noh, H. & Isom, D. A.",
         year: "2026",
         title:
           "Misrecognition and victimization: The South Asian American experience",
-        venue: "The Critical Criminologist, 34(2), 27–30",
+        venue:
+          "The Critical Criminologist: Special Issue, 34(2), 27–30. Division of Critical Criminology and Social Justice, American Society of Criminology",
         link: "https://divisiononcriticalcriminology.com/publications/newsletter/",
         linkLabel: "Issue",
+        note: "Newsletter",
       },
     ],
     projects: [
       {
         status: "Under review",
-        text: "Noh, H., Song, J., & Park, H. Using machine learning alongside conventional regression, this study compares traditional criminological theory factors with cultural adaptation factors in explaining online offending among second-generation immigrant adolescents in South Korea.",
+        text: "Noh, H.*, Song, J., & Park, H. Using machine learning alongside conventional regression, this study compares traditional criminological theory factors with cultural adaptation factors in explaining online offending among second-generation immigrant adolescents in South Korea.",
       },
     ],
   },
@@ -116,7 +118,7 @@ export const researchAreas: ResearchArea[] = [
     shortTitle: "Technology-facilitated violence",
     thesis: "New forms of harm emerge faster than data and law can adapt.",
     description:
-      "My work examines stalking, cyberstalking, deepfake abuse, and other forms of online harm, showing that aggregate statistics can conceal distinct patterns of victimization and coping. I am extending this line in two directions: tracing how online harm translates into offline violence, discrimination, and public perceptions, and identifying the routes through which victims come to seek help. Because these harms cross borders by design, this work is built on international and interdisciplinary collaboration.",
+      "Emerging technologies create new forms of victimization faster than data and law can adapt. My work to date has examined stalking, cyberstalking, deepfake abuse, and other forms of online harm, showing that aggregate statistics conceal distinct patterns of victimization and coping. I am now extending this line in two directions: tracing how online harm translates into offline violence, discrimination, and public perceptions, and identifying the routes through which victims come to seek help. Because these harms cross borders by design, my work in this area is built on international and interdisciplinary collaboration.",
     questions: [
       "How do emerging technologies reshape victimization?",
       "What patterns persist across forms of online harm, and what routes lead victims to help?",
@@ -131,7 +133,7 @@ export const researchAreas: ResearchArea[] = [
         link: "https://doi.org/10.1016/j.jcrimjus.2026.102709",
       },
       {
-        authors: "Noh, H. & Isom, D. A.",
+        authors: "Noh, H.* & Isom, D. A.",
         year: "2026",
         title:
           "Gender differences in stalking victimization and coping strategies: An application of gendered general strain theory",
@@ -142,7 +144,7 @@ export const researchAreas: ResearchArea[] = [
     projects: [
       {
         status: "Ongoing study",
-        text: "Noh, H. & Sutton, T. This study examines how masculinity ideology and male peer support shape the victim–offender overlap in gender-based violence.",
+        text: "Noh, H. & Sutton, T. An ongoing study examines how masculinity ideology and male peer support shape the victim–offender overlap in gender-based violence.",
       },
     ],
   },
@@ -153,10 +155,10 @@ export const researchAreas: ResearchArea[] = [
     shortTitle: "Law & victim protection",
     thesis: "Protection depends on law that victims can actually reach.",
     description:
-      "Documenting victimization showed me a second problem: many victims struggle to report harm or to be recognized when they do. My work follows legal responses across their life course—how statutes are written and interpreted, how courts sentence, and how governments respond when new forms of abuse outgrow existing law. I also ask what jurisdictions can learn from one another as harm increasingly crosses borders. The aim is legible statutes, consistent enforcement, and institutions that respond before harm escalates.",
+      "Documenting victimization showed me a second problem: many victims struggle to report harm or to be recognized when they do. In this area, I examine how law can protect victims and, through that protection, enhance public safety. My work follows legal responses across their life course: how statutes are written and interpreted, how courts sentence, and how governments respond when new forms of abuse outgrow existing law. A growing strand turns to statutory language itself, because protection often hinges on how the same ambiguous terms are read by the public, by legal practitioners, and increasingly by AI systems. I am also extending this work comparatively, asking what jurisdictions can learn from one another as harm increasingly crosses borders. The aim is law that victims can actually reach: legible statutes, consistent enforcement, and institutions that respond before harm escalates.",
     questions: [
       "How can institutions and legal frameworks better recognize and protect victims?",
-      "What can comparative analysis beyond the United States reveal about effective legal responses?",
+      "Given the transnational nature of online offending, what can comparative analysis beyond the United States reveal about effective legal responses?",
     ],
     publications: [
       {
@@ -168,7 +170,7 @@ export const researchAreas: ResearchArea[] = [
         link: "https://doi.org/10.1016/j.jcrimjus.2025.102593",
       },
       {
-        authors: "Jung, S. & Noh, H.",
+        authors: "Jung, S. & Noh, H.*",
         year: "2025",
         title:
           "From grassroots advocacy to AI governance: Lessons from South Korea’s 2024 Deepfake Sexual Abuse Crisis on democratising knowledge and policy",
@@ -192,15 +194,15 @@ export const researchAreas: ResearchArea[] = [
       },
       {
         status: "Manuscript in progress",
-        text: "Noh, H., Yoon, J., & Burrow, J. D. A focal concerns study of incarcerated stalkers who violate protective measures, extending sentencing research into enforcement.",
+        text: "Noh, H., Yoon, J., & Burrow, J. D. A follow-up study applies focal concerns theory to incarcerated stalkers who violate protective measures, extending the sentencing work into enforcement.",
       },
       {
         status: "Manuscript in progress",
-        text: "Noh, H. A study of how fear shapes stalking victims’ legal help-seeking.",
+        text: "Noh, H. Another study examines how fear shapes stalking victims' legal help-seeking.",
       },
       {
         status: "Preparing funding",
-        text: "Noh, H., Sim, R., et al. An experimental collaboration with linguists comparing how the public and legal practitioners interpret ambiguous terms in anti-stalking statutes.",
+        text: "Noh, H., Sim, R., et al. In collaboration with linguists, we experimentally compare how the public and legal practitioners interpret ambiguous terms in anti-stalking statutes, examining the gap between ordinary understandings of the law and its professional application.",
       },
     ],
   },
@@ -211,7 +213,7 @@ export const researchAreas: ResearchArea[] = [
     shortTitle: "AI & computational methods",
     thesis: "AI is both a research tool and a subject of justice inquiry.",
     description:
-      "Artificial intelligence is transforming how the justice system documents, predicts, and interprets. Rather than replacing traditional criminology, I pair established theories and methods with AI and machine learning to test where each adds value and where each reaches its limits across policing, risk prediction, and legal interpretation. The goal is accuracy, fairness, and public safety—with safeguards proportionate to what is at stake.",
+      "Artificial intelligence is transforming how the justice system documents, predicts, and interprets. Rather than replacing traditional criminology, I pair established theories and methods with AI and machine learning to test where each adds value and where each reaches its limits, across policing, risk prediction, and legal interpretation. This work treats AI as both a research tool and a research subject to enhance accuracy, fairness and public safety. The goal is integration with safeguards proportionate to what is at stake.",
     questions: [
       "What can AI and machine learning do reliably in justice decisions, and where do they fall short?",
       "How should societies govern the harms that AI itself creates?",
@@ -229,15 +231,15 @@ export const researchAreas: ResearchArea[] = [
     projects: [
       {
         status: "Manuscript in revisions",
-        text: "Park, H., Noh, H., & Yoon, M. An AI-assisted police report generation program using body-worn camera footage, comparing audio-only and multimodal approaches.",
+        text: "Park, H., Noh, H.*, & Yoon, M. This project develops AI-assisted police report generation program from body-worn camera footage, comparing audio-only and multimodal approaches.",
       },
       {
         status: "Manuscript in revisions",
-        text: "Noh, H., Park, H., & Son, C. A comparison of machine learning and traditional statistical models for juvenile recidivism prediction, asking both which performs better and what each misses.",
+        text: "Noh, H.*, Park, H., & Son, C. We compared machine learning and traditional statistical models for juvenile recidivism prediction, asking not only which performs better but what each misses.",
       },
       {
         status: "Preparing funding",
-        text: "Noh, H., Sim, R., et al. A collaboration with linguists examining how large language models interpret ambiguous anti-stalking statutes, compared with actual court rulings.",
+        text: "Noh, H., Sim, R., et al. In collaboration with linguists, we examine how large language models interpret ambiguous terms in anti-stalking statutes, comparing their interpretations against actual court rulings.",
       },
     ],
   },
@@ -258,52 +260,52 @@ export const courses = [
     format: "In person",
     terms: "Fall 2026",
     description:
-      "A civic ethics and advocacy course built around a single question: who gets heard? Students stay with one issue all semester—listening first, mapping the debate, then making their case with evidence.",
+      "A civic ethics and advocacy course built around a single question: who gets heard? Students learn social advocacy by staying with one issue all semester: listening first, then mapping the debate, then making their case with evidence.",
     activity: {
       title: "Hearing the Unheard",
-      text: "Before taking a public position, students conduct fieldwork through observation, interviews, or a photovoice essay. They listen to voices rarely centered in their issue and examine how that listening changed what they thought they knew.",
+      text: "Before taking any public position, students conduct fieldwork, observing, interviewing, or creating a photovoice essay, to listen to voices rarely centered in their chosen issue, then examine how listening changed what they thought they knew.",
     },
   },
   {
-    code: "CRJU 202",
+    code: "CRJU202",
     title: "Research Methods",
     status: "Previously taught",
     level: "Undergraduate",
     format: "In person",
-    terms: "Fall 2025 · Spring 2023 · Fall 2022",
+    terms: "Fall 2025, Spring 2023, Fall 2022",
     description:
-      "An introduction to research design and data analysis in criminology and criminal justice. Scaffolded labs and a semester-long team project in RStudio help students become critical consumers and producers of knowledge.",
+      "An introduction to research design and data analysis in criminology and criminal justice. Through scaffolded labs and a semester-long team research project in RStudio for hands-on activities, students become critical consumers and producers of knowledge.",
     activity: {
       title: "Exploring Official Crime Data",
-      text: "Students navigate UCR and NCVS data to locate and interpret crime statistics, then ask what official counts capture—and what they miss.",
+      text: "Students navigate UCR and NCVS data sources to locate and interpret crime statistics, then ask what official counts capture and what they miss.",
     },
   },
   {
-    code: "CRJU 303",
+    code: "CRJU303",
     title: "Criminal Procedure",
     status: "Previously taught",
     level: "Undergraduate",
     format: "In person",
     terms: "Spring 2025",
     description:
-      "An examination of the constitutional principles governing investigation, prosecution, and adjudication. From stop and frisk to digital surveillance, students ask whom procedural protections reach and where technology outpaces the law.",
+      "An examination of the constitutional principles governing investigation, prosecution, and adjudication. Interpreting landmark decisions from stop and frisk to digital surveillance, students ask whom procedural protections reach, whom they miss, and where technology outpaces the law.",
     activity: {
       title: "From Precedent to Present",
-      text: "Student teams trace a real criminal case to landmark precedent, assess its effect on today’s legal system, and lead a debate about where existing doctrine may fall short as technology evolves.",
+      text: "Student teams select a real criminal case, trace its connection to landmark precedent, and assess its impact on today's criminal legal system. Teams examine the case’s significance and legal implications, then lead a class debate anticipating where existing doctrine may fall short as technology evolves.",
     },
   },
   {
-    code: "CRJU 101",
+    code: "CRJU101",
     title: "The American Criminal Justice System",
     status: "Previously taught",
     level: "Undergraduate",
     format: "In person",
-    terms: "Fall 2024 · Spring 2024 · Fall 2023",
+    terms: "Fall 2024, Spring 2024, Fall 2023",
     description:
-      "How does the American criminal justice system work, and for whom? Case-based and reflective learning connects foundational concepts in policing, courts, and corrections to questions of fairness.",
+      "How does the American criminal justice system work, and for whom? From how crime is measured to how policing, courts, and corrections respond, students use case-based and reflective learning to connect foundational concepts to questions of fairness.",
     activity: {
       title: "Reflection Papers",
-      text: "Building on class discussions of mass incarceration, students respond to the documentary 13th and grapple with how historical injustice continues to shape the present.",
+      text: "Building on class discussions of mass incarceration, students respond to the documentary 13th with reflection papers grappling with how historical injustice continues to shape today’s justice system.",
     },
   },
 ];
@@ -311,27 +313,28 @@ export const courses = [
 export const teachingAssistantCourses = [
   {
     title: "Sociology of Crime",
-    code: "CRJU 341 / SOCY 353",
+    code: "CRJU341/SOCY353",
     detail: "Undergraduate · Online",
   },
   {
-    title: "Introduction to African American Studies",
-    code: "AFAM 201",
+    title:
+      "Introduction to African American Studies: Social and Historical Foundations",
+    code: "AFAM201",
     detail: "Undergraduate · Hybrid",
   },
   {
     title: "Race, Crime, and Criminal Justice",
-    code: "CRJU 563 / AFAM 397",
+    code: "CRJU563/AFAM397",
     detail: "Undergraduate · Hybrid",
   },
   {
     title: "Analyzing Homicide",
-    code: "CRJU 420",
+    code: "CRJU420",
     detail: "Undergraduate · In person",
   },
   {
     title: "Communities and Crime",
-    code: "CRJU 430",
+    code: "CRJU430",
     detail: "Undergraduate · Online",
   },
   {

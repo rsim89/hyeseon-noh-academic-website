@@ -4,7 +4,7 @@ import { buildPageMetadata } from "../lib/metadata";
 
 export async function generateMetadata() {
   return buildPageMetadata(
-    "About | Hyeseon Noh",
+    "About Me | Hyeseon Noh",
     "The academic path and community commitments that inform Hyeseon Noh’s research and teaching.",
   );
 }
@@ -32,9 +32,6 @@ export default function AboutPage() {
     <main>
       <SiteHeader active="about" />
       <header className="academic-page-hero academic-page-hero--centered about-page__hero">
-        <p className="section-number academic-page-hero__index" hidden>
-          04 / About
-        </p>
         <h1>Across places, one enduring question.</h1>
         <p className="academic-page-hero__intro">
           My academic path connects South Korea and the United States. Across

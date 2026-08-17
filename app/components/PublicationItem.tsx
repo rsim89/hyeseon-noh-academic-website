@@ -1,5 +1,15 @@
 import type { Publication } from "../data/siteContent";
 
+function formatAuthors(authors: string) {
+  return authors.split(/(Noh, H\.\*?)/g).map((part, index) =>
+    /^Noh, H\.\*?$/.test(part) ? (
+      <strong key={`${part}-${index}`}>{part}</strong>
+    ) : (
+      part
+    ),
+  );
+}
+
 export function PublicationItem({
   publication,
   compact = false,
@@ -18,7 +28,9 @@ export function PublicationItem({
         {publication.note ? <small>{publication.note}</small> : null}
       </div>
       <div className="publication__copy">
-        <p className="publication__authors">{publication.authors}</p>
+        <p className="publication__authors">
+          {formatAuthors(publication.authors)}
+        </p>
         <h3 className="publication__title">{publication.title}</h3>
         <p className="publication__venue">{publication.venue}</p>
       </div>
@@ -30,8 +42,7 @@ export function PublicationItem({
             rel="noreferrer"
             aria-label={`${linkLabel} for ${publication.title}`}
           >
-            <span>{linkLabel}</span>
-            <span aria-hidden="true">↗</span>
+            {linkLabel}
           </a>
         ) : (
           <span aria-label="No external link available">—</span>

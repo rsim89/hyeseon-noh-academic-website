@@ -10,6 +10,22 @@ export async function generateMetadata() {
   );
 }
 
+function formatActivityText(text: string) {
+  const [before, after] = text.split("13th");
+
+  if (after === undefined) {
+    return text;
+  }
+
+  return (
+    <>
+      {before}
+      <em>13th</em>
+      {after}
+    </>
+  );
+}
+
 export default function TeachingPage() {
   return (
     <main>
@@ -18,17 +34,12 @@ export default function TeachingPage() {
         className="teaching-editorial-hero"
         aria-labelledby="teaching-page-title"
       >
-        <p className="section-number academic-page-hero__index" hidden>
-          03 / Teaching
-        </p>
         <h1 id="teaching-page-title" className="teaching-editorial-hero__title">
           Teaching
         </h1>
-        <p className="teaching-editorial-hero__question">Who gets heard?</p>
         <p className="teaching-editorial-hero__intro">
-          I bring research to life by connecting concepts to students’ own
-          lives and communities—cultivating critical thinkers, data-literate
-          citizens, and ethically responsible practitioners.
+          I bring research to life by connecting concepts to students&apos;
+          own lives and communities.
         </p>
       </header>
 
@@ -37,23 +48,25 @@ export default function TeachingPage() {
         aria-labelledby="teaching-philosophy-title"
       >
         <header className="teaching-editorial-philosophy__header">
-          <p className="section-number">01 / Teaching philosophy</p>
           <h2 id="teaching-philosophy-title">Teaching Philosophy</h2>
           <p className="teaching-editorial-philosophy__statement">
-            Learning becomes transformative when evidence meets experience.
+            Learning is transformative when it brings research to life.
           </p>
         </header>
         <div className="teaching-editorial-philosophy__body">
           <p>
-            As a scholar, my role is not only to create knowledge through
-            research but also to share it through teaching. I design learning
-            experiences that make abstract concepts tangible, invite students
-            to examine what official accounts include and omit, and prepare
-            them to carry careful listening into civic life.
+            As a scholar–educator, my role is not only to create knowledge
+            through research but also to share it through teaching. I believe
+            in the transformative power of learning that brings research to
+            life, connecting concepts to students&apos; own lives and
+            communities. I view teaching as an opportunity to cultivate
+            critical thinkers, data-literate citizens, and ethically
+            responsible practitioners.
           </p>
           <blockquote>
-            “The classroom is where students practice recognizing whose
-            experience counts as evidence.”
+            “Ultimately, I want students to become thoughtful participants in
+            civic life who carry the question of who gets heard into their own
+            communities.”
           </blockquote>
         </div>
       </section>
@@ -64,10 +77,8 @@ export default function TeachingPage() {
       >
         <div className="section-title-row">
           <div>
-            <p className="section-number">02 / Courses taught</p>
-            <h2 id="courses-title">Courses</h2>
+            <h2 id="courses-title">Courses Taught</h2>
           </div>
-          <p>Selected undergraduate teaching</p>
         </div>
 
         <div className="teaching-course-collection__list teaching-course-list">
@@ -81,7 +92,6 @@ export default function TeachingPage() {
                 aria-labelledby={courseTitleId}
               >
                 <div className="teaching-course-row__description">
-                  <p className="teaching-course-row__number">0{index + 1}</p>
                   <div>
                     <p className="eyebrow">{course.code}</p>
                     <h3 id={courseTitleId}>{course.title}</h3>
@@ -89,10 +99,6 @@ export default function TeachingPage() {
                   </div>
                 </div>
                 <dl className="teaching-course-row__metadata">
-                  <div>
-                    <dt>Status</dt>
-                    <dd>{course.status}</dd>
-                  </div>
                   <div>
                     <dt>Term</dt>
                     <dd>{course.terms}</dd>
@@ -117,7 +123,6 @@ export default function TeachingPage() {
         aria-labelledby="selected-activities-title"
       >
         <header className="teaching-activity-programs__header">
-          <p className="section-number">03 / Classroom practice</p>
           <h2 id="selected-activities-title">
             Selected Classroom Activities
           </h2>
@@ -139,9 +144,8 @@ export default function TeachingPage() {
                   <h3 id={groupTitleId}>{course.title}</h3>
                 </header>
                 <div className="teaching-activity-program__activity">
-                  <p className="eyebrow">Featured activity</p>
                   <h4 id={activityTitleId}>{course.activity.title}</h4>
-                  <p>{course.activity.text}</p>
+                  <p>{formatActivityText(course.activity.text)}</p>
                 </div>
               </article>
             );
@@ -154,9 +158,7 @@ export default function TeachingPage() {
         aria-labelledby="teaching-assistant-title"
       >
         <header className="ta-intro teaching-additional__header teaching-assistant-experience__header">
-          <p className="section-number">04 / Additional teaching</p>
           <h2 id="teaching-assistant-title">Teaching Assistant Experience</h2>
-          <p>Courses supported as a teaching assistant</p>
         </header>
         <div className="ta-list teaching-additional__list teaching-assistant-experience__list">
           {teachingAssistantCourses.map((course) => (
@@ -175,10 +177,10 @@ export default function TeachingPage() {
         <p className="eyebrow">Research and teaching, connected</p>
         <h2>Understanding begins with listening.</h2>
         <a className="button button-dark-outline" href="/research">
-          Explore the research <span aria-hidden="true">↗</span>
+          Explore the research
         </a>
       </section>
-      <SiteFooter />
+      <SiteFooter contact={false} />
     </main>
   );
 }

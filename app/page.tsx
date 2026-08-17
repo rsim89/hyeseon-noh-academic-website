@@ -25,10 +25,10 @@ export default function Home() {
         <figure className="home-profile__visual">
           <img
             className="home-profile__portrait"
-            src="/hyeseon-noh-portrait.png"
+            src="/hyeseon-noh-portrait.jpg"
             alt="Portrait of Hyeseon Noh"
-            width="229"
-            height="306"
+            width="1200"
+            height="1800"
             loading="eager"
             fetchPriority="high"
             decoding="async"
@@ -44,7 +44,7 @@ export default function Home() {
           <h1 id="home-profile-title">Hyeseon Noh</h1>
           <div className="home-profile__prose">
             <p>
-              I am a{" "}
+              Welcome! I’m Hyeseon Noh (<em>Hay-sun No</em>), a{" "}
               <a
                 href={institutionLinks.bridgeHumanities}
                 target="_blank"
@@ -58,7 +58,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Race and Justice: An International Journal
+                <em>Race and Justice: An International Journal</em>
               </a>
               , and a member of the Membership Committee for the{" "}
               <a
@@ -68,31 +68,20 @@ export default function Home() {
               >
                 ASC Division of International Criminology
               </a>
-              . <strong>I study overlooked forms of victimization: how harm is
-              produced and reproduced, how emerging technologies reshape it,
-              and how law and institutions can better recognize and protect
-              victims.</strong> I use quantitative and computational methods,
-              guided by one principle:
-              <em> understanding is where justice begins.</em>
+              .
             </p>
 
             <p>
-              My work appears in <em>Journal of Criminal Justice</em>,{" "}
-              <em>Ethnic and Racial Studies</em>, and{" "}
-              <em>Victims &amp; Offenders</em>, among other outlets. Across four
-              connected research areas, I move from documenting overlooked
-              harm toward building responses to it.{" "}
-              <Link href="/research">Read more about my research</Link>.
-            </p>
-
-            <p>
-              Sharing this work with students and communities matters to me. In
-              Social Advocacy and Ethical Life, students return throughout the
-              semester to the question “who gets heard?” Beyond the classroom,
-              I have served at the Korean School of Columbia, SC, and Kids of
-              Asia with Save the Children in South Korea.{" "}
-              <Link href="/teaching">Explore my teaching</Link> or{" "}
-              <Link href="/about">learn more about my community work</Link>.
+              I study overlooked forms of victimization. My research asks: How
+              are these forms of victimization produced and reproduced? How do
+              emerging technologies reshape victimization and outpace the
+              criminal justice system? And how can institutions and legal
+              frameworks better recognize and protect these victims? I address
+              these questions using quantitative and computational methods.
+              Behind these questions lies an idea that{" "}
+              <em>understanding is where justice begins</em>: when overlooked
+              experiences become legible, victims find recognition and
+              belonging, and society learns how to respond.
             </p>
 
             <p>
@@ -100,19 +89,35 @@ export default function Home() {
               University of South Carolina in May 2026. My dissertation,
               “Developing and Validating Asian American General Strain Theory,”
               received the Helen Taylor Greene and Vernetta D. Young Graduate
-              Fellowship, the ADPCCJ Student Research Award, and the ACJS
-              Student Scholarship Mini-Grant Travel Award for People of Color
-              and Women.
+              Fellowship (ASC Division on People of Color and Crime, 2023), the
+              ADPCCJ Student Research Award (2024), and the ACJS Student
+              Scholarship Mini-Grant Travel Award for People of Color and Women
+              (2026).
+            </p>
+
+            <p>
+              Beyond my dissertation, my work appears in{" "}
+              <em>Journal of Criminal Justice</em>,{" "}
+              <em>Ethnic and Racial Studies</em>, and{" "}
+              <em>Victims &amp; Offenders</em>, among other outlets. Learn more on
+              my <Link href="/research">Research</Link> page.
+            </p>
+
+            <p>
+              Sharing this work with students and communities matters to me. In
+              my course, Social Advocacy and Ethical Life, students grapple with
+              one question throughout the semester: who gets heard? It is the
+              same question that drives my research. Through it, students build
+              a foundation for their own advocacy and for thinking carefully
+              about evidence and civic responsibility (details on the{" "}
+              <Link href="/teaching">Teaching</Link> page). Beyond the
+              classroom, I have served as an Instructor at the Korean School of
+              Columbia, SC, and as an Assistant Instructor for Kids of Asia
+              (Save the Children, South Korea), helping students connect with
+              their cultural heritage and building supportive communities
+              around them (see <Link href="/about">About Me</Link>).
             </p>
           </div>
-
-          <nav className="home-profile__links" aria-label="Profile links">
-            <Link href="/cv">Curriculum vitae</Link>
-            <Link href="/research">Research</Link>
-            <Link href="/teaching">Teaching</Link>
-            <Link href="/about">About</Link>
-            <a href="mailto:hnoh@email.sc.edu">Contact</a>
-          </nav>
         </article>
       </section>
 

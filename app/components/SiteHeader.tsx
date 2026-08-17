@@ -10,7 +10,7 @@ const navItems = [
   { label: "CV", href: "/cv", id: "cv" },
   { label: "Research", href: "/research", id: "research" },
   { label: "Teaching", href: "/teaching", id: "teaching" },
-  { label: "About", href: "/about", id: "about" },
+  { label: "About Me", href: "/about", id: "about" },
 ] as const;
 
 export function SiteHeader({ active, tone = "light" }: SiteHeaderProps) {
