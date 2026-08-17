@@ -173,7 +173,7 @@ main {
   aspect-ratio: 344 / 356;
   display: block;
   object-fit: cover;
-  object-position: center 34%;
+  object-position: center top;
 }
 
 .home-profile__visual figcaption {
