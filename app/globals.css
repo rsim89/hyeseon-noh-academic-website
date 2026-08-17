@@ -169,47 +169,11 @@ main {
 }
 
 .home-profile__portrait {
-  position: relative;
   width: 100%;
   aspect-ratio: 344 / 356;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.78), transparent 42%),
-    linear-gradient(150deg, #cbd1e6 0%, #e4e1dc 58%, #bbc4e0 100%);
-  color: var(--accent);
-}
-
-.home-profile__portrait::before,
-.home-profile__portrait::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(70, 84, 216, 0.34);
-  border-radius: 50%;
-}
-
-.home-profile__portrait::before {
-  width: 260px;
-  height: 260px;
-  top: -92px;
-  left: -74px;
-}
-
-.home-profile__portrait::after {
-  width: 190px;
-  height: 190px;
-  right: -44px;
-  bottom: -56px;
-}
-
-.home-profile__monogram {
-  position: relative;
-  z-index: 1;
-  font-size: clamp(74px, 7vw, 108px);
-  letter-spacing: -0.08em;
-  line-height: 1;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+  display: block;
+  object-fit: cover;
+  object-position: center 34%;
 }
 
 .home-profile__visual figcaption {

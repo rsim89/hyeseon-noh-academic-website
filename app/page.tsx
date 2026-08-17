@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- GitHub Pages serves this optimized portrait directly without a Next image endpoint. */
 import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -22,16 +23,16 @@ export default function Home() {
         aria-labelledby="home-profile-title"
       >
         <figure className="home-profile__visual">
-          {/* Replace this placeholder with /profile.jpg when a public portrait is available. */}
-          <div
-            className="home-profile__portrait home-profile__portrait--placeholder"
-            role="img"
-            aria-label="Portrait placeholder for Hyeseon Noh"
-          >
-            <span className="home-profile__monogram" aria-hidden="true">
-              HN
-            </span>
-          </div>
+          <img
+            className="home-profile__portrait"
+            src="/hyeseon-noh-portrait.jpg"
+            alt="Portrait of Hyeseon Noh"
+            width="963"
+            height="1280"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
           <figcaption>
             <strong>Hyeseon Noh, Ph.D.</strong>
             <span>Criminology &amp; Criminal Justice</span>
