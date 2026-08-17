@@ -15,7 +15,7 @@ and the Cloudflare-compatible Vite runtime.
 
 Requirements: Node.js 22.13 or newer.
 
-    npm install
+    npm ci
     npm run dev
 
 Open `http://localhost:3000`.
@@ -47,6 +47,17 @@ in `app/data/siteContent.ts`. Shared navigation and contact details are in
 
 ## Deployment
 
-The project builds to Cloudflare Worker-compatible ESM through Vinext. The
-included `.openai/hosting.json` is ready for OpenAI Sites deployment and does
-not request a database, storage bucket, or authentication.
+The project supports two deployment targets:
+
+- `npm run build` creates the Cloudflare Worker-compatible Vinext build used by
+  OpenAI Sites.
+- `npm run build:pages` renders the five routes as static HTML for GitHub Pages
+  in `pages-dist/`.
+
+Pushes to `main` are tested and deployed automatically by
+`.github/workflows/deploy-pages.yml`. The public site is available at:
+
+https://rsim89.github.io/hyeseon-noh-academic-website/
+
+GitHub Pages runs Node.js during the build; the deployed result itself is
+static HTML and CSS.

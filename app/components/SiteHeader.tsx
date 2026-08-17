@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type SiteHeaderProps = {
   active?: "research" | "teaching" | "cv" | "about";
   tone?: "light" | "dark";
@@ -12,10 +14,10 @@ const navItems = [
 export function SiteHeader({ active, tone = "light" }: SiteHeaderProps) {
   return (
     <header className={`site-header site-header--${tone}`}>
-      <a className="wordmark" href="/" aria-label="Hyeseon Noh home">
+      <Link className="wordmark" href="/" aria-label="Hyeseon Noh home">
         <span>HN</span>
         <strong>Hyeseon Noh</strong>
-      </a>
+      </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">
         {navItems.map((item) => (
@@ -39,7 +41,7 @@ export function SiteHeader({ active, tone = "light" }: SiteHeaderProps) {
       <details className="mobile-nav">
         <summary aria-label="Open navigation">Menu</summary>
         <nav aria-label="Mobile navigation">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           {navItems.map((item) => (
             <a
               key={item.id}
