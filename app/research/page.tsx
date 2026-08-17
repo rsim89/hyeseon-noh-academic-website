@@ -19,8 +19,8 @@ export default function ResearchPage() {
         className="research-editorial-hero"
         aria-labelledby="research-page-title"
       >
-        <p className="section-number research-editorial-hero__index">
-          01 / Research
+        <p className="section-number academic-page-hero__index" hidden>
+          02 / Research
         </p>
         <h1 id="research-page-title" className="research-editorial-hero__title">
           Research

@@ -165,14 +165,15 @@ main {
 }
 
 .home-profile__visual {
-  margin: 0;
+  width: min(100%, 260px);
+  margin: 0 auto;
 }
 
 .home-profile__portrait {
   width: 100%;
-  aspect-ratio: 344 / 356;
+  aspect-ratio: 963 / 1280;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
 }
 
@@ -256,10 +257,8 @@ main {
   text-align: center;
 }
 
-.research-editorial-hero__index,
-.teaching-editorial-hero__index,
-.academic-page-hero__index {
-  margin-bottom: 20px;
+.academic-page-hero__index[hidden] {
+  display: none;
 }
 
 .research-editorial-hero__title,

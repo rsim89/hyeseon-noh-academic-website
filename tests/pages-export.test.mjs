@@ -12,14 +12,26 @@ const outputDirectory = path.join(projectRoot, "pages-dist");
 const basePath = "/hyeseon-noh-academic-website";
 const pages = [
   ["index.html", /Understanding is where/],
-  ["research/index.html", /From overlooked harm to legible response/],
-  ["teaching/index.html", /Who gets heard/],
-  ["cv/index.html", /Scholarship, teaching, and service/],
-  ["about/index.html", /Across places, one enduring question/],
+  [
+    "research/index.html",
+    /From overlooked harm to legible response/,
+    /02 \/ Research/,
+  ],
+  ["teaching/index.html", /Who gets heard/, /03 \/ Teaching/],
+  [
+    "cv/index.html",
+    /Scholarship, teaching, and service/,
+    /01 \/ Curriculum vitae/,
+  ],
+  [
+    "about/index.html",
+    /Across places, one enduring question/,
+    /04 \/ About/,
+  ],
 ];
 
 test("exports every route as standalone static HTML", async () => {
-  for (const [file, expectedContent] of pages) {
+  for (const [file, expectedContent, hiddenPageIndex] of pages) {
     const html = await readFile(path.join(outputDirectory, file), "utf8");
 
     assert.match(html, /^<!DOCTYPE html>/i, file);
@@ -38,6 +50,14 @@ test("exports every route as standalone static HTML", async () => {
       ),
       file,
     );
+    if (hiddenPageIndex) {
+      assert.match(html, hiddenPageIndex, file);
+      assert.match(
+        html,
+        /class="section-number academic-page-hero__index" hidden=""/,
+        file,
+      );
+    }
   }
 });
 
