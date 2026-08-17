@@ -31,6 +31,8 @@ test("renders the academic homepage", async () => {
   assert.match(html, /Understanding is where/);
   assert.match(html, /overlooked forms of victimization/i);
   assert.match(html, /Read more about my research/);
+  assert.match(html, /alt="Portrait of Hyeseon Noh"/);
+  assert.match(html, /src="\/hyeseon-noh-portrait\.jpg"/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Building your site/);
 });
 
