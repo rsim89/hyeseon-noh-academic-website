@@ -18,8 +18,8 @@ export default function TeachingPage() {
         className="teaching-editorial-hero"
         aria-labelledby="teaching-page-title"
       >
-        <p className="section-number teaching-editorial-hero__index">
-          02 / Teaching
+        <p className="section-number academic-page-hero__index" hidden>
+          03 / Teaching
         </p>
         <h1 id="teaching-page-title" className="teaching-editorial-hero__title">
           Teaching

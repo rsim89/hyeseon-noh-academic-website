@@ -41,10 +41,9 @@ export default function CVPage() {
     <main>
       <SiteHeader active="cv" />
       <header className="academic-page-hero academic-page-hero--centered cv-page__hero">
-        <p className="academic-page-hero__index" aria-hidden="true">
-          03
+        <p className="section-number academic-page-hero__index" hidden>
+          01 / Curriculum vitae
         </p>
-        <p className="eyebrow">Curriculum vitae</p>
         <h1>Scholarship, teaching, and service.</h1>
         <p className="academic-page-hero__intro">
           A concise web view of my academic profile. The full downloadable CV

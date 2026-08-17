@@ -32,10 +32,9 @@ export default function AboutPage() {
     <main>
       <SiteHeader active="about" />
       <header className="academic-page-hero academic-page-hero--centered about-page__hero">
-        <p className="academic-page-hero__index" aria-hidden="true">
-          04
+        <p className="section-number academic-page-hero__index" hidden>
+          04 / About
         </p>
-        <p className="eyebrow">About</p>
         <h1>Across places, one enduring question.</h1>
         <p className="academic-page-hero__intro">
           My academic path connects South Korea and the United States. Across
