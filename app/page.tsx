@@ -25,10 +25,10 @@ export default function Home() {
         <figure className="home-profile__visual">
           <img
             className="home-profile__portrait"
-            src="/hyeseon-noh-portrait.jpg"
+            src="/hyeseon-noh-portrait.png"
             alt="Portrait of Hyeseon Noh"
-            width="963"
-            height="1280"
+            width="229"
+            height="306"
             loading="eager"
             fetchPriority="high"
             decoding="async"
