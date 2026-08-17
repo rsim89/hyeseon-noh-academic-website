@@ -165,13 +165,14 @@ main {
 }
 
 .home-profile__visual {
-  width: min(100%, 260px);
+  width: min(100%, 229px);
   margin: 0 auto;
 }
 
 .home-profile__portrait {
   width: 100%;
-  aspect-ratio: 963 / 1280;
+  max-width: 100%;
+  height: auto;
   display: block;
   object-fit: contain;
   object-position: center top;
@@ -1227,8 +1228,14 @@ main {
   }
 
   .home-profile {
-    grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
-    gap: 30px;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .home-profile__bio {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .home-profile__prose p {
@@ -1268,22 +1275,26 @@ main {
 
   .home-profile {
     min-height: auto;
-    padding-top: 24px;
+    padding-top: 16px;
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 18px;
   }
 
   .home-profile__visual {
-    max-width: 390px;
+    width: clamp(136px, 40vw, 176px);
+    max-width: none;
   }
 
   .home-profile__visual figcaption {
+    padding-top: 6px;
     flex-direction: column;
-    gap: 2px;
+    align-items: center;
+    gap: 1px;
+    text-align: center;
   }
 
   .home-profile__visual figcaption span {
-    text-align: left;
+    text-align: center;
   }
 
   .home-profile__prose p {

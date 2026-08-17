@@ -65,7 +65,7 @@ test("exports Pages support files and public social image", async () => {
   await access(path.join(outputDirectory, ".nojekyll"));
   await access(path.join(outputDirectory, "404.html"));
   await access(path.join(outputDirectory, "og-editorial.png"));
-  await access(path.join(outputDirectory, "hyeseon-noh-portrait.jpg"));
+  await access(path.join(outputDirectory, "hyeseon-noh-portrait.png"));
 
   const home = await readFile(path.join(outputDirectory, "index.html"), "utf8");
   assert.match(
@@ -74,8 +74,9 @@ test("exports Pages support files and public social image", async () => {
   );
   assert.match(
     home,
-    /src="\/hyeseon-noh-academic-website\/hyeseon-noh-portrait\.jpg"/,
+    /src="\/hyeseon-noh-academic-website\/hyeseon-noh-portrait\.png"/,
   );
+  assert.doesNotMatch(home, /hyeseon-noh-portrait\.jpg/);
   assert.match(
     home,
     /rel="canonical" href="https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/"/,
