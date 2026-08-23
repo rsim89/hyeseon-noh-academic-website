@@ -208,7 +208,7 @@ export const researchAreas: ResearchArea[] = [
       },
       {
         status: "Manuscript in progress",
-        text: "In another study, I examine how fear shapes whether stalking victims seek help from the legal system.",
+        text: "Noh, H. In another study, I examine how fear shapes whether stalking victims seek help from the legal system.",
       },
       {
         status: "Preparing funding",

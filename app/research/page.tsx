@@ -137,7 +137,7 @@ export default function ResearchPage() {
             See how this question enters the classroom
           </a>
           <a className="button button-light" href="/cv">
-            Please see my CV for a complete list of publications.
+            Please see my CV for a complete list of publications
           </a>
         </div>
       </section>

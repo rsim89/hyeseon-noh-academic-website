@@ -206,6 +206,12 @@ main {
   font-weight: 600;
 }
 
+.home-profile__identity {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
 .home-profile__visual figcaption span {
   text-align: left;
 }
@@ -1260,8 +1266,8 @@ main {
 
 .research-closing__actions {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 14px;
 }
 

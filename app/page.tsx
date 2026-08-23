@@ -34,9 +34,11 @@ export default function Home() {
             decoding="async"
           />
           <figcaption>
-            <strong>Hyeseon Noh, Ph.D.</strong>
+            <div className="home-profile__identity">
+              <strong>Hyeseon Noh, Ph.D.</strong>
+              <span>(she/her)</span>
+            </div>
             <span>Criminology &amp; Criminal Justice</span>
-            <span>she/her</span>
             <div className="home-profile__contact">
               <span>Email:</span>
               <a href="mailto:hnoh@email.sc.edu">hnoh@email.sc.edu</a>

@@ -111,7 +111,7 @@ test("renders the academic homepage", async () => {
   const html = await response.text();
   assert.match(html, /Understanding is where/);
   assert.match(html, /structural victimization/i);
-  assert.match(html, /she\/her/);
+  assert.match(html, /Hyeseon Noh, Ph\.D\.<\/strong>\s*<span>\(she\/her\)<\/span>/);
   assert.match(html, /mailto:hnoh@email\.sc\.edu/);
   assert.match(html, /mailto:hnohccj@gmail\.com/);
   assert.doesNotMatch(html, /Hay-sun No/);
@@ -254,6 +254,10 @@ test("applies the revised research and teaching content contract", async () => {
   assert.match(research, /The same strain does not mean the same thing in every context/);
   assert.match(research, /How do new technologies change who is harmed and who harms/);
   assert.match(research, /Contextualizing target congruence theory/);
+  assert.match(
+    research,
+    /<strong>Noh, H\.<\/strong> In another study, I examine how fear shapes whether stalking victims seek help from the legal system\./,
+  );
   assert.match(research, /How are the same legal terms read differently by the public/);
   assert.match(
     research,
@@ -275,7 +279,7 @@ test("applies the revised research and teaching content contract", async () => {
   );
   assert.match(
     research,
-    /class="button button-light"[^>]*>\s*Please see my CV for a complete list of publications\./,
+    /class="button button-light"[^>]*>\s*Please see my CV for a complete list of publications\s*<\/a>/,
   );
   assert.doesNotMatch(
     research,
@@ -305,7 +309,7 @@ test("renders the revised About narrative and all documentary photo galleries", 
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /Understanding is where justice begins/);
+  assert.match(html, /Understanding is\s*<br\/>\s*where justice begins/);
   assert.match(html, /Where it started, curiosity about people/);
   assert.match(html, /How I found justice/);
   assert.match(html, /What community keeps teaching me/);
@@ -313,6 +317,10 @@ test("renders the revised About narrative and all documentary photo galleries", 
   assert.equal((html.match(/class="about-photo"/g) ?? []).length, 7);
   assert.match(html, /about-young-saver-hearts-gathered\.jpg/);
   assert.match(html, /about-korean-school-festival-booth\.jpg/);
+  assert.ok(
+    html.indexOf("about-young-saver-photo-wall.jpg") <
+      html.indexOf("about-young-saver-hearts-gathered.jpg"),
+  );
   assert.match(html, /<em>danilminjok gukga<\/em>/);
   assert.doesNotMatch(html, /Across places, one enduring question/);
   assert.doesNotMatch(html, /\[여기에 View photos/);

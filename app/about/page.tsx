@@ -22,11 +22,12 @@ type AboutPhoto = {
 
 const beginningPhotos: AboutPhoto[] = [
   {
-    src: "/about-young-saver-hearts-gathered.jpg",
-    alt: "Four student drawings filled with colorful hearts",
-    caption: "“Hearts Gathered into Love,” titled by the four students who made it",
-    width: 1145,
-    height: 852,
+    src: "/about-young-saver-photo-wall.jpg",
+    alt: "A heart-shaped photo wall bordered by handwritten notes",
+    caption:
+      "A photo wall built one handwritten note at a time, by parents and students",
+    width: 960,
+    height: 540,
   },
   {
     src: "/about-young-saver-student-event.jpg",
@@ -36,12 +37,11 @@ const beginningPhotos: AboutPhoto[] = [
     height: 890,
   },
   {
-    src: "/about-young-saver-photo-wall.jpg",
-    alt: "A heart-shaped photo wall bordered by handwritten notes",
-    caption:
-      "A photo wall built one handwritten note at a time, by parents and students",
-    width: 960,
-    height: 540,
+    src: "/about-young-saver-hearts-gathered.jpg",
+    alt: "Four student drawings filled with colorful hearts",
+    caption: "“Hearts Gathered into Love,” titled by the four students who made it",
+    width: 1145,
+    height: 852,
   },
 ];
 
@@ -126,7 +126,11 @@ export default function AboutPage() {
         <h1 className="visually-hidden">About Me</h1>
         <div className="about-values__copy">
           <h2>
-            <q>Understanding is where justice begins.</q>
+            <q>
+              Understanding is
+              <br />
+              where justice begins.
+            </q>
           </h2>
           <p>
             For me, this is more than a research statement. It is a way of
