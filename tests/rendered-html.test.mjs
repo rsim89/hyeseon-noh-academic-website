@@ -110,7 +110,11 @@ test("renders the academic homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /Understanding is where/);
-  assert.match(html, /overlooked forms of victimization/i);
+  assert.match(html, /structural victimization/i);
+  assert.match(html, /she\/her/);
+  assert.match(html, /mailto:hnoh@email\.sc\.edu/);
+  assert.match(html, /mailto:hnohccj@gmail\.com/);
+  assert.doesNotMatch(html, /Hay-sun No/);
   assert.match(html, /alt="Portrait of Hyeseon Noh"/);
   assert.match(html, /src="\/hyeseon-noh-portrait\.jpg"/);
   assert.match(html, /width="1200"/);
@@ -173,14 +177,14 @@ test("shows the complete portrait without cropping", async () => {
 
 test("renders every primary section route", async () => {
   const expected = [
-    ["/cv", /Updated August 2026/, false],
-    ["/research", /From overlooked harm to legible response/, false],
+    ["/cv", /<h1[^>]*>CV<\/h1>/, false],
+    ["/research", /Harm does not become visible on its own/, false],
     [
       "/teaching",
       /I bring research to life by connecting concepts to students/,
       false,
     ],
-    ["/about", /Across places, one enduring question/, true],
+    ["/about", /Where it started, curiosity about people/, true],
   ];
 
   for (const [pathname, pattern, hasContactFooter] of expected) {
@@ -216,7 +220,8 @@ test("renders the current CV with open, download, and embedded PDF access", asyn
 
   const html = await response.text();
   assert.match(html, /<h1[^>]*>CV<\/h1>/);
-  assert.match(html, /Updated August 2026/);
+  assert.doesNotMatch(html, /Hyeseon_Noh_CV_August_2026\.pdf/);
+  assert.doesNotMatch(html, /class="cv-document-hero__updated"/);
   assert.match(
     html,
     /<a[^>]*href="\/hyeseon-noh-cv\.pdf"[^>]*>\s*Open\s*<\/a>/,
@@ -242,8 +247,14 @@ test("applies the revised research and teaching content contract", async () => {
 
   assert.match(
     research,
-    /I approach this work using quantitative and computational methods/,
+    /Harm does not become visible on its own\. I approach my work using quantitative and computational methods/,
   );
+  assert.doesNotMatch(research, /From overlooked harm to legible response/);
+  assert.match(research, /Race\/Ethnicity, culture, and strain/);
+  assert.match(research, /The same strain does not mean the same thing in every context/);
+  assert.match(research, /How do new technologies change who is harmed and who harms/);
+  assert.match(research, /Contextualizing target congruence theory/);
+  assert.match(research, /How are the same legal terms read differently by the public/);
   assert.match(
     research,
     /Emerging technologies create new forms of victimization faster than data and law can adapt/,
@@ -262,6 +273,10 @@ test("applies the revised research and teaching content contract", async () => {
     research,
     /Please see my CV for a complete list of publications/,
   );
+  assert.match(
+    research,
+    /class="button button-light"[^>]*>\s*Please see my CV for a complete list of publications\./,
+  );
   assert.doesNotMatch(
     research,
     /research-program__number|research-program__count|Research area|↗/i,
@@ -271,6 +286,10 @@ test("applies the revised research and teaching content contract", async () => {
   assert.match(teaching, /As a scholar–educator/);
   assert.match(teaching, /Ultimately, I want students to become thoughtful participants/);
   assert.match(teaching, /Courses Taught/);
+  assert.match(teaching, /SAEL200/);
+  assert.doesNotMatch(teaching, /SAEL 200/);
+  assert.match(teaching, /Social Advocacy\s*<br\/>\s*and Ethical Life/);
+  assert.match(teaching, /students’ own lives/);
   assert.match(teaching, /Students learn social advocacy by staying with one issue/);
   assert.match(teaching, /Interpreting landmark decisions from stop and frisk/);
   assert.match(teaching, /From how crime is measured to how policing, courts, and corrections respond/);
@@ -279,6 +298,24 @@ test("applies the revised research and teaching content contract", async () => {
     teaching,
     /Selected undergraduate teaching|Featured activity|Courses supported as a teaching assistant|teaching-course-row__number|>Status</i,
   );
+});
+
+test("renders the revised About narrative and all documentary photo galleries", async () => {
+  const response = await render("/about");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Understanding is where justice begins/);
+  assert.match(html, /Where it started, curiosity about people/);
+  assert.match(html, /How I found justice/);
+  assert.match(html, /What community keeps teaching me/);
+  assert.equal((html.match(/<summary>View photos<\/summary>/g) ?? []).length, 3);
+  assert.equal((html.match(/class="about-photo"/g) ?? []).length, 7);
+  assert.match(html, /about-young-saver-hearts-gathered\.jpg/);
+  assert.match(html, /about-korean-school-festival-booth\.jpg/);
+  assert.match(html, /<em>danilminjok gukga<\/em>/);
+  assert.doesNotMatch(html, /Across places, one enduring question/);
+  assert.doesNotMatch(html, /\[여기에 View photos/);
 });
 
 test("uses the garnet visual system and removes requested accent rules", async () => {

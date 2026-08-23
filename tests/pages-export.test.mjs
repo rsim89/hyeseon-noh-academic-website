@@ -28,7 +28,7 @@ const pages = [
   },
   {
     file: "research/index.html",
-    expectedContent: /From overlooked harm to legible response/,
+    expectedContent: /Harm does not become visible on its own/,
     hasContactFooter: false,
     internal: true,
   },
@@ -41,13 +41,13 @@ const pages = [
   },
   {
     file: "cv/index.html",
-    expectedContent: /Updated August 2026/,
+    expectedContent: /<h1[^>]*>CV<\/h1>/,
     hasContactFooter: false,
     internal: true,
   },
   {
     file: "about/index.html",
-    expectedContent: /Across places, one enduring question/,
+    expectedContent: /Where it started, curiosity about people/,
     hasContactFooter: true,
     internal: true,
   },
@@ -113,6 +113,13 @@ test("exports Pages support files and current public assets", async () => {
   await access(path.join(outputDirectory, "og-editorial.png"));
   await access(path.join(outputDirectory, "hyeseon-noh-portrait.jpg"));
   await access(path.join(outputDirectory, "hyeseon-noh-cv.pdf"));
+  await access(path.join(outputDirectory, "about-young-saver-hearts-gathered.jpg"));
+  await access(path.join(outputDirectory, "about-young-saver-student-event.jpg"));
+  await access(path.join(outputDirectory, "about-young-saver-photo-wall.jpg"));
+  await access(path.join(outputDirectory, "about-resilience-program-session.jpg"));
+  await access(path.join(outputDirectory, "about-resilience-program-messages.jpg"));
+  await access(path.join(outputDirectory, "about-korean-school-sogo-class.jpeg"));
+  await access(path.join(outputDirectory, "about-korean-school-festival-booth.jpg"));
   await assert.rejects(
     access(path.join(outputDirectory, "hyeseon-noh-portrait.png")),
     isMissingFile,
@@ -150,7 +157,8 @@ test("exports the CV with base-path-safe open, download, and embed URLs", async 
   const escapedCvPath = cvPath.replaceAll("/", "\\/").replace(".", "\\.");
 
   assert.match(html, /<h1[^>]*>CV<\/h1>/);
-  assert.match(html, /Updated August 2026/);
+  assert.doesNotMatch(html, /Hyeseon_Noh_CV_August_2026\.pdf/);
+  assert.doesNotMatch(html, /class="cv-document-hero__updated"/);
   assert.match(
     html,
     new RegExp(`<a[^>]*href="${escapedCvPath}"[^>]*>\\s*Open\\s*</a>`),

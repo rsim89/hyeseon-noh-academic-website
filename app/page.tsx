@@ -8,7 +8,7 @@ import { buildPageMetadata } from "./lib/metadata";
 export async function generateMetadata() {
   return buildPageMetadata(
     "Hyeseon Noh, Ph.D. | Criminology & Criminal Justice",
-    "Understanding is where justice begins. Research on overlooked victimization, technology-facilitated harm, law, and AI.",
+    "Understanding is where justice begins. Research on structural victimization, technology-facilitated harm, law, and AI.",
   );
 }
 
@@ -36,6 +36,12 @@ export default function Home() {
           <figcaption>
             <strong>Hyeseon Noh, Ph.D.</strong>
             <span>Criminology &amp; Criminal Justice</span>
+            <span>she/her</span>
+            <div className="home-profile__contact">
+              <span>Email:</span>
+              <a href="mailto:hnoh@email.sc.edu">hnoh@email.sc.edu</a>
+              <a href="mailto:hnohccj@gmail.com">hnohccj@gmail.com</a>
+            </div>
           </figcaption>
         </figure>
 
@@ -44,7 +50,7 @@ export default function Home() {
           <h1 id="home-profile-title">Hyeseon Noh</h1>
           <div className="home-profile__prose">
             <p>
-              Welcome! I’m Hyeseon Noh (<em>Hay-sun No</em>), a{" "}
+              Welcome! I’m Hyeseon Noh, a{" "}
               <a
                 href={institutionLinks.bridgeHumanities}
                 target="_blank"
@@ -72,16 +78,17 @@ export default function Home() {
             </p>
 
             <p>
-              I study overlooked forms of victimization. My research asks: How
-              are these forms of victimization produced and reproduced? How do
+              I study the structural victimization that the criminal justice
+              system and criminological theories tend to miss. My research asks:
+              How is victimization structurally produced and reproduced? How do
               emerging technologies reshape victimization and outpace the
               criminal justice system? And how can institutions and legal
               frameworks better recognize and protect these victims? I address
               these questions using quantitative and computational methods.
-              Behind these questions lies an idea that{" "}
-              <em>understanding is where justice begins</em>: when overlooked
+              Behind these questions lies a simple idea:{" "}
+              <em>understanding is where justice begins</em>. When overlooked
               experiences become legible, victims find recognition and
-              belonging, and society learns how to respond.
+              belonging, and society learns how to see and respond.
             </p>
 
             <p>

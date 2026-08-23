@@ -18,10 +18,6 @@ export default function CVPage() {
 
       <header className="cv-document-hero" aria-labelledby="cv-page-title">
         <h1 id="cv-page-title">CV</h1>
-        <p className="cv-document-hero__filename">
-          Hyeseon_Noh_CV_August_2026.pdf
-        </p>
-        <p className="cv-document-hero__updated">Updated August 2026</p>
         <nav className="cv-document-hero__actions" aria-label="CV actions">
           <a href={cvPdfPath} target="_blank" rel="noreferrer">
             Open

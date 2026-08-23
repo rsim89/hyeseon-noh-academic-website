@@ -36,18 +36,18 @@ export const researchAreas: ResearchArea[] = [
     id: "race-culture-strain",
     number: "01",
     title: "Race/Ethnicity, Culture, and Strain",
-    shortTitle: "Race, culture & strain",
-    thesis: "Theory should recognize the experiences it was not built to see.",
+    shortTitle: "Race/Ethnicity, culture, and strain",
+    thesis: "The same strain does not mean the same thing in every context.",
     description:
-      "Criminological theories explain crime and victimization through the experiences they were built on, and some populations were missed in that foundation. In this area, I examine how distinct cultural and social contexts shape strain, coping, and harm. The larger goal moves beyond explanation: understanding how these contexts should inform theory, measurement, and institutional practice, so that the people they describe are protected by and integrated into the systems built to serve them.",
+      "Race/ethnicity, culture, and social position shape what people experience as strain and the resources they can draw on to cope. In this area, I examine how people come to understand themselves as racialized subjects, and how that understanding shapes the strains they face, the coping available to them, and the harm that follows. The larger goal moves beyond explanation: understanding how these contexts should inform theory, measurement, and institutional practice, so that the people they describe are protected by and integrated into the systems built to serve them.",
     questions: [
-      "How are diverse forms of victimization produced and reproduced?",
+      "How is victimization structurally produced and reproduced?",
       "How do cultural contexts shape strain, coping, and harm?",
       "How can societies and institutions respond to protect them?",
     ],
     dissertation: {
       title: "Developing and validating Asian American general strain theory",
-      text: "My dissertation, “Developing and validating Asian American general strain theory,” builds and tests a general strain theory framework specific to Asian American experiences. It is now developing into a series of articles on (1) the theory’s validation, (2) impact of collectivism, and (3) immigrant generational variation. Extending this work, I am lead PI on a proposal under review at the Russell Sage Foundation, examining ethnic heterogeneity among Asian Americans and their experiences in the criminal justice system.",
+      text: "My dissertation, “Developing and validating Asian American general strain theory,” builds and tests a general strain theory framework specific to Asian American experiences. It is now developing into a series of articles on (1) the theory’s validation, (2) impact of collectivism, and (3) immigrant generational variation. Extending this work, I am lead PI on a proposal under review at the Russell Sage Foundation, asking how differently racialized Asian American subgroups understand their own racial position, how others misrecognize it, and how that gap routes them toward or away from the criminal justice system.",
     },
     publications: [
       {
@@ -120,8 +120,9 @@ export const researchAreas: ResearchArea[] = [
     description:
       "Emerging technologies create new forms of victimization faster than data and law can adapt. My work to date has examined stalking, cyberstalking, deepfake abuse, and other forms of online harm, showing that aggregate statistics conceal distinct patterns of victimization and coping. I am now extending this line in two directions: tracing how online harm translates into offline violence, discrimination, and public perceptions, and identifying the routes through which victims come to seek help. Because these harms cross borders by design, my work in this area is built on international and interdisciplinary collaboration.",
     questions: [
-      "How do emerging technologies reshape victimization?",
-      "What patterns persist across forms of online harm, and what routes lead victims to help?",
+      "How do new technologies change who is harmed and who harms?",
+      "What patterns persist across forms of online harm, and how do they carry into physical violence?",
+      "What paths lead victims toward help, and where do those paths break down?",
     ],
     publications: [
       {
@@ -152,13 +153,14 @@ export const researchAreas: ResearchArea[] = [
     id: "law-victim-protection",
     number: "03",
     title: "Legal Responses and Victim Protection",
-    shortTitle: "Law & victim protection",
+    shortTitle: "Legal responses and victim protection",
     thesis: "Protection depends on law that victims can actually reach.",
     description:
-      "Documenting victimization showed me a second problem: many victims struggle to report harm or to be recognized when they do. In this area, I examine how law can protect victims and, through that protection, enhance public safety. My work follows legal responses across their life course: how statutes are written and interpreted, how courts sentence, and how governments respond when new forms of abuse outgrow existing law. A growing strand turns to statutory language itself, because protection often hinges on how the same ambiguous terms are read by the public, by legal practitioners, and increasingly by AI systems. I am also extending this work comparatively, asking what jurisdictions can learn from one another as harm increasingly crosses borders. The aim is law that victims can actually reach: legible statutes, consistent enforcement, and institutions that respond before harm escalates.",
+      "Many victims struggle to report harm or to be recognized when they do. In this area, I examine how law can protect victims and, through that protection, enhance public safety. My work follows legal responses across their life course: how statutes are written and interpreted, how courts sentence, and how governments respond when new forms of abuse outgrow existing law. A growing strand turns to statutory language itself, because protection often hinges on how the same ambiguous terms are read by the public, by legal practitioners, and increasingly by AI systems. I am also extending this work comparatively, asking what jurisdictions can learn from one another as harm increasingly crosses borders. The aim is law that victims can actually reach: legible statutes, consistent enforcement, and institutions that respond before harm escalates.",
     questions: [
       "How can institutions and legal frameworks better recognize and protect victims?",
       "Given the transnational nature of online offending, what can comparative analysis beyond the United States reveal about effective legal responses?",
+      "How are the same legal terms read differently by the public, by legal practitioners, and by AI systems?",
     ],
     publications: [
       {
@@ -189,6 +191,14 @@ export const researchAreas: ResearchArea[] = [
     ],
     projects: [
       {
+        status: "Under review",
+        text: "Burrow, J. D. & Noh, H. This study examines how race and the ideal victim framework shape which intimacy-related homicides are recognized and how they are handled, using Florida data",
+      },
+      {
+        status: "Manuscript in draft",
+        text: "Burrow, J. D. & Noh, H. Contextualizing target congruence theory: Victim-offender relationships in homicide",
+      },
+      {
         status: "Preparing funding",
         text: "Burrow, J. D., & Noh, H. A comparative study of public defenders in the United States and South Korea.",
       },
@@ -198,7 +208,7 @@ export const researchAreas: ResearchArea[] = [
       },
       {
         status: "Manuscript in progress",
-        text: "Noh, H. Another study examines how fear shapes stalking victims' legal help-seeking.",
+        text: "In another study, I examine how fear shapes whether stalking victims seek help from the legal system.",
       },
       {
         status: "Preparing funding",
@@ -210,10 +220,10 @@ export const researchAreas: ResearchArea[] = [
     id: "ai-computational-methods",
     number: "04",
     title: "AI and Computational Methods",
-    shortTitle: "AI & computational methods",
+    shortTitle: "AI and computational methods",
     thesis: "AI is both a research tool and a subject of justice inquiry.",
     description:
-      "Artificial intelligence is transforming how the justice system documents, predicts, and interprets. Rather than replacing traditional criminology, I pair established theories and methods with AI and machine learning to test where each adds value and where each reaches its limits, across policing, risk prediction, and legal interpretation. This work treats AI as both a research tool and a research subject to enhance accuracy, fairness and public safety. The goal is integration with safeguards proportionate to what is at stake.",
+      "Artificial intelligence is transforming how the justice system documents, predicts, and interprets. Rather than replacing traditional criminology, I pair established theories and methods with AI and machine learning to test where each adds value and where each reaches its limits, across policing, risk prediction, and legal interpretation. This work treats AI as both a research tool and a research subject to enhance accuracy, fairness, and public safety. The goal is integration with safeguards proportionate to what is at stake.",
     questions: [
       "What can AI and machine learning do reliably in justice decisions, and where do they fall short?",
       "How should societies govern the harms that AI itself creates?",
@@ -231,7 +241,7 @@ export const researchAreas: ResearchArea[] = [
     projects: [
       {
         status: "Manuscript in revisions",
-        text: "Park, H., Noh, H.*, & Yoon, M. This project develops AI-assisted police report generation program from body-worn camera footage, comparing audio-only and multimodal approaches.",
+        text: "Park, H., Noh, H.*, & Yoon, M. This project develops an AI-assisted police report generation program from body-worn camera footage, comparing audio-only and multimodal approaches.",
       },
       {
         status: "Manuscript in revisions",
@@ -253,7 +263,7 @@ export const selectedPublications = [
 
 export const courses = [
   {
-    code: "SAEL 200",
+    code: "SAEL200",
     title: "Social Advocacy and Ethical Life",
     status: "Upcoming",
     level: "Undergraduate",

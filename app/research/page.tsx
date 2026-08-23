@@ -32,14 +32,11 @@ export default function ResearchPage() {
         <h1 id="research-page-title" className="research-editorial-hero__title">
           Research
         </h1>
-        <p className="research-editorial-hero__statement">
-          From overlooked harm to legible response.
-        </p>
         <p className="research-editorial-hero__intro">
-          My research focuses on overlooked forms of victimization. I approach
-          this work using quantitative and computational methods. My work
-          develops in four areas, each moving from documenting harm toward
-          building responses to it:
+          Harm does not become visible on its own. I approach my work using
+          quantitative and computational methods. My work develops in four
+          areas, each moving from documenting harm toward building responses to
+          it:
         </p>
       </header>
 
@@ -135,12 +132,14 @@ export default function ResearchPage() {
       <section className="closing-cta research-closing">
         <p className="eyebrow eyebrow--light">The connecting thread</p>
         <h2>Who is recognized—and what changes once they are?</h2>
-        <a className="button button-light" href="/teaching">
-          See how this question enters the classroom
-        </a>
-        <a className="research-closing__cv-link" href="/cv">
-          Please see my CV for a complete list of publications.
-        </a>
+        <div className="research-closing__actions">
+          <a className="button button-light" href="/teaching">
+            See how this question enters the classroom
+          </a>
+          <a className="button button-light" href="/cv">
+            Please see my CV for a complete list of publications.
+          </a>
+        </div>
       </section>
       <SiteFooter contact={false} />
     </main>

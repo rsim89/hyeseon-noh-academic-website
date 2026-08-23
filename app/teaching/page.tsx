@@ -38,8 +38,8 @@ export default function TeachingPage() {
           Teaching
         </h1>
         <p className="teaching-editorial-hero__intro">
-          I bring research to life by connecting concepts to students&apos;
-          own lives and communities.
+          I bring research to life by connecting concepts to students’ own lives
+          and communities.
         </p>
       </header>
 
@@ -58,10 +58,9 @@ export default function TeachingPage() {
             As a scholar–educator, my role is not only to create knowledge
             through research but also to share it through teaching. I believe
             in the transformative power of learning that brings research to
-            life, connecting concepts to students&apos; own lives and
-            communities. I view teaching as an opportunity to cultivate
-            critical thinkers, data-literate citizens, and ethically
-            responsible practitioners.
+            life, connecting concepts to students’ own lives and communities. I
+            view teaching as an opportunity to cultivate critical thinkers,
+            data-literate citizens, and ethically responsible practitioners.
           </p>
           <blockquote>
             “Ultimately, I want students to become thoughtful participants in
@@ -141,7 +140,17 @@ export default function TeachingPage() {
               >
                 <header className="teaching-activity-program__course">
                   <p className="eyebrow">{course.code}</p>
-                  <h3 id={groupTitleId}>{course.title}</h3>
+                  <h3 id={groupTitleId}>
+                    {course.code === "SAEL200" ? (
+                      <>
+                        Social Advocacy
+                        <br />
+                        and Ethical Life
+                      </>
+                    ) : (
+                      course.title
+                    )}
+                  </h3>
                 </header>
                 <div className="teaching-activity-program__activity">
                   <h4 id={activityTitleId}>{course.activity.title}</h4>
