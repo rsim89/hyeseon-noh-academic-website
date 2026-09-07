@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
@@ -123,6 +124,14 @@ test("exports Pages support files and current public assets", async () => {
   await assert.rejects(
     access(path.join(outputDirectory, "hyeseon-noh-portrait.png")),
     isMissingFile,
+  );
+
+  const socialCard = await readFile(
+    path.join(outputDirectory, "og-editorial.png"),
+  );
+  assert.equal(
+    createHash("sha256").update(socialCard).digest("hex"),
+    "496092c6f6c8167f81606a56aea65d359f1498137071a803bb70a3897e463425",
   );
 
   const home = await readFile(path.join(outputDirectory, "index.html"), "utf8");
