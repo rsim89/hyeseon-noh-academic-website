@@ -110,7 +110,27 @@ test("renders the academic homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /Understanding is where/);
-  assert.match(html, /structural victimization/i);
+  assert.match(
+    html,
+    /I study how crime and justice outcomes are shaped by social structures/,
+  );
+  assert.match(
+    html,
+    /How is the recognition of victimization structurally produced\?/,
+  );
+  assert.match(
+    html,
+    /the people most exposed to this process\?/,
+  );
+  assert.match(
+    html,
+    /<em>understanding is where justice begins<\/em>/,
+  );
+  assert.match(html, /people find recognition and belonging/);
+  assert.doesNotMatch(
+    html,
+    /I study the structural victimization that the criminal justice system/,
+  );
   assert.match(html, /Hyeseon Noh, Ph\.D\.<\/strong>\s*<span>\(she\/her\)<\/span>/);
   assert.match(html, /mailto:hnoh@email\.sc\.edu/);
   assert.match(html, /mailto:hnohccj@gmail\.com/);
@@ -138,6 +158,9 @@ test("shows the complete portrait without cropping", async () => {
   ].map((match) => match[1]);
   const profileRules = [
     ...css.matchAll(/\.home-profile\s*\{([^}]*)\}/g),
+  ].map((match) => match[1]);
+  const proseRules = [
+    ...css.matchAll(/\.home-profile__prose p\s*\{([^}]*)\}/g),
   ].map((match) => match[1]);
   const image = await readFile(
     new URL("../public/hyeseon-noh-portrait.jpg", import.meta.url),
@@ -168,6 +191,10 @@ test("shows the complete portrait without cropping", async () => {
     profileRules.some(
       (rule) => /padding-top:\s*16px/.test(rule) && /gap:\s*18px/.test(rule),
     ),
+  );
+  assert.deepEqual(
+    proseRules.map((rule) => rule.match(/font-size:\s*(\d+px)/)?.[1]),
+    ["16px", "15px", "15px"],
   );
   await assert.rejects(
     access(new URL("../public/hyeseon-noh-portrait.png", import.meta.url)),
@@ -251,7 +278,30 @@ test("applies the revised research and teaching content contract", async () => {
   );
   assert.doesNotMatch(research, /From overlooked harm to legible response/);
   assert.match(research, /Race\/Ethnicity, culture, and strain/);
-  assert.match(research, /The same strain does not mean the same thing in every context/);
+  assert.match(
+    research,
+    /Theory has to account for the contexts and experiences it was not built to explain/,
+  );
+  assert.match(
+    research,
+    /How do people come to understand themselves as racialized subjects, and how does that shape the strain they face\?/,
+  );
+  assert.match(
+    research,
+    /How do cultural contexts shape strain, coping, and the harm that follows\?/,
+  );
+  assert.match(
+    research,
+    /Why do people turn to the law, or turn away from it — and how is that shaped by race\/ethnicity and social position\?/,
+  );
+  assert.match(
+    research,
+    /how that gap shapes whether they reach the criminal justice system and victim services/,
+  );
+  assert.doesNotMatch(
+    research,
+    /The same strain does not mean the same thing in every context/,
+  );
   assert.match(research, /How do new technologies change who is harmed and who harms/);
   assert.match(research, /Contextualizing target congruence theory/);
   assert.match(

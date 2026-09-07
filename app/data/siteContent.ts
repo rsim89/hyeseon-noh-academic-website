@@ -37,17 +37,18 @@ export const researchAreas: ResearchArea[] = [
     number: "01",
     title: "Race/Ethnicity, Culture, and Strain",
     shortTitle: "Race/Ethnicity, culture, and strain",
-    thesis: "The same strain does not mean the same thing in every context.",
+    thesis:
+      "Theory has to account for the contexts and experiences it was not built to explain.",
     description:
       "Race/ethnicity, culture, and social position shape what people experience as strain and the resources they can draw on to cope. In this area, I examine how people come to understand themselves as racialized subjects, and how that understanding shapes the strains they face, the coping available to them, and the harm that follows. The larger goal moves beyond explanation: understanding how these contexts should inform theory, measurement, and institutional practice, so that the people they describe are protected by and integrated into the systems built to serve them.",
     questions: [
-      "How is victimization structurally produced and reproduced?",
-      "How do cultural contexts shape strain, coping, and harm?",
-      "How can societies and institutions respond to protect them?",
+      "How do people come to understand themselves as racialized subjects, and how does that shape the strain they face?",
+      "How do cultural contexts shape strain, coping, and the harm that follows?",
+      "Why do people turn to the law, or turn away from it — and how is that shaped by race/ethnicity and social position?",
     ],
     dissertation: {
       title: "Developing and validating Asian American general strain theory",
-      text: "My dissertation, “Developing and validating Asian American general strain theory,” builds and tests a general strain theory framework specific to Asian American experiences. It is now developing into a series of articles on (1) the theory’s validation, (2) impact of collectivism, and (3) immigrant generational variation. Extending this work, I am lead PI on a proposal under review at the Russell Sage Foundation, asking how differently racialized Asian American subgroups understand their own racial position, how others misrecognize it, and how that gap routes them toward or away from the criminal justice system.",
+      text: "My dissertation, “Developing and validating Asian American general strain theory,” builds and tests a general strain theory framework specific to Asian American experiences. It is now developing into a series of articles on (1) the theory’s validation, (2) impact of collectivism, and (3) immigrant generational variation. Extending this work, I am lead PI on a proposal under review at the Russell Sage Foundation, asking how differently racialized Asian American subgroups understand their own racial position, how others misrecognize it, and how that gap shapes whether they reach the criminal justice system and victim services.",
     },
     publications: [
       {

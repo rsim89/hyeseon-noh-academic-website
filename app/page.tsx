@@ -8,7 +8,7 @@ import { buildPageMetadata } from "./lib/metadata";
 export async function generateMetadata() {
   return buildPageMetadata(
     "Hyeseon Noh, Ph.D. | Criminology & Criminal Justice",
-    "Understanding is where justice begins. Research on structural victimization, technology-facilitated harm, law, and AI.",
+    "Understanding is where justice begins. Research on how social structures shape crime, justice outcomes, victimization, technology, and law.",
   );
 }
 
@@ -80,17 +80,19 @@ export default function Home() {
             </p>
 
             <p>
-              I study the structural victimization that the criminal justice
-              system and criminological theories tend to miss. My research asks:
-              How is victimization structurally produced and reproduced? How do
-              emerging technologies reshape victimization and outpace the
-              criminal justice system? And how can institutions and legal
-              frameworks better recognize and protect these victims? I address
-              these questions using quantitative and computational methods.
-              Behind these questions lies a simple idea:{" "}
+              I study how crime and justice outcomes are shaped by social
+              structures, and how criminological theory and the criminal justice
+              system can better account for the inequalities embedded in them. My
+              research asks: (1) How is the recognition of victimization
+              structurally produced? (2) How do emerging technologies reshape
+              these dynamics and outpace the criminal justice system? and (3) How
+              can institutions and legal frameworks better recognize and protect
+              the people most exposed to this process? I address these questions
+              using quantitative and computational methods. Behind these questions
+              lies a simple idea:{" "}
               <em>understanding is where justice begins</em>. When overlooked
-              experiences become legible, victims find recognition and
-              belonging, and society learns how to see and respond.
+              experiences become legible, people find recognition and belonging,
+              and society learns how to see and respond.
             </p>
 
             <p>

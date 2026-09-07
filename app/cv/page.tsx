@@ -5,7 +5,7 @@ import { buildPageMetadata } from "../lib/metadata";
 export async function generateMetadata() {
   return buildPageMetadata(
     "CV | Hyeseon Noh",
-    "View or download Hyeseon Noh’s curriculum vitae, updated August 2026.",
+    "View or download Hyeseon Noh’s curriculum vitae, updated September 2026.",
   );
 }
 
