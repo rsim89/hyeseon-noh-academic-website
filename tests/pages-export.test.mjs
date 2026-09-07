@@ -131,13 +131,13 @@ test("exports Pages support files and current public assets", async () => {
   );
   assert.equal(
     createHash("sha256").update(socialCard).digest("hex"),
-    "496092c6f6c8167f81606a56aea65d359f1498137071a803bb70a3897e463425",
+    "10af63902bcf22303c29fcb6ca232c58404ea20c198ead0374be12c28d8d6792",
   );
 
   const home = await readFile(path.join(outputDirectory, "index.html"), "utf8");
   assert.match(
     home,
-    /https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/og-editorial\.png\?v=white-20260907/,
+    /https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/og-editorial\.png\?v=text-only-garnet-20260907/,
   );
   assert.match(
     home,
