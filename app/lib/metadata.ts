@@ -19,7 +19,7 @@ export async function buildPageMetadata(
   )
     .split(",")[0]
     .trim();
-  const imageUrl = `${protocol}://${host}/og-editorial.png`;
+  const imageUrl = `${protocol}://${host}/og-editorial.png?v=white-20260907`;
 
   return {
     title,

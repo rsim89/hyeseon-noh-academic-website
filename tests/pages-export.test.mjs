@@ -137,7 +137,7 @@ test("exports Pages support files and current public assets", async () => {
   const home = await readFile(path.join(outputDirectory, "index.html"), "utf8");
   assert.match(
     home,
-    /https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/og-editorial\.png/,
+    /https:\/\/rsim89\.github\.io\/hyeseon-noh-academic-website\/og-editorial\.png\?v=white-20260907/,
   );
   assert.match(
     home,
