@@ -251,15 +251,15 @@ test("renders the current CV with open, download, and embedded PDF access", asyn
   assert.doesNotMatch(html, /class="cv-document-hero__updated"/);
   assert.match(
     html,
-    /<a[^>]*href="\/hyeseon-noh-cv\.pdf"[^>]*>\s*Open\s*<\/a>/,
+    /<a[^>]*href="\/hyeseon-noh-cv\.pdf\?v=ccb627a5"[^>]*>\s*Open\s*<\/a>/,
   );
   assert.match(
     html,
-    /<a[^>]*href="\/hyeseon-noh-cv\.pdf"[^>]*download=""[^>]*>\s*Download\s*<\/a>/,
+    /<a[^>]*href="\/hyeseon-noh-cv\.pdf\?v=ccb627a5"[^>]*download=""[^>]*>\s*Download\s*<\/a>/,
   );
   assert.match(
     html,
-    /<object[^>]*data="\/hyeseon-noh-cv\.pdf"[^>]*type="application\/pdf"/,
+    /<object[^>]*data="\/hyeseon-noh-cv\.pdf\?v=ccb627a5"[^>]*type="application\/pdf"/,
   );
   assert.doesNotMatch(html, /PDF forthcoming/i);
 });

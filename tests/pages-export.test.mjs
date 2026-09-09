@@ -157,13 +157,17 @@ test("exports Pages support files and current public assets", async () => {
 test("exports the CV with base-path-safe open, download, and embed URLs", async () => {
   const pdf = await readFile(path.join(outputDirectory, "hyeseon-noh-cv.pdf"));
   assert.equal(pdf.subarray(0, 5).toString("ascii"), "%PDF-");
+  assert.equal(
+    createHash("sha256").update(pdf).digest("hex"),
+    "ccb627a5a8b36ff692dac4a7a2884fd55f96126d34628a903f085b0d5e90cbc0",
+  );
 
   const html = await readFile(
     path.join(outputDirectory, "cv", "index.html"),
     "utf8",
   );
-  const cvPath = `${basePath}/hyeseon-noh-cv.pdf`;
-  const escapedCvPath = cvPath.replaceAll("/", "\\/").replace(".", "\\.");
+  const cvPath = `${basePath}/hyeseon-noh-cv.pdf?v=ccb627a5`;
+  const escapedCvPath = cvPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
   assert.match(html, /<h1[^>]*>CV<\/h1>/);
   assert.doesNotMatch(html, /Hyeseon_Noh_CV_August_2026\.pdf/);

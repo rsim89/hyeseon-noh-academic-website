@@ -9,7 +9,7 @@ export async function generateMetadata() {
   );
 }
 
-const cvPdfPath = "/hyeseon-noh-cv.pdf";
+const cvPdfPath = "/hyeseon-noh-cv.pdf?v=ccb627a5";
 
 export default function CVPage() {
   return (
